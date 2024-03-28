@@ -1315,18 +1315,18 @@ func WasiHttp0_2_0_TypesHttpErrorCode(err WasiHttp0_2_0_TypesIoError) Option[Was
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_dns_error_payload_t)(unsafe.Pointer(&ret.val.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesDnsErrorPayload
       var lift_ret_val_val_Rcode Option[string]
-      if lift_ret_val_ptr.rcode.is_some {
+      if lift_ret_val_ptr.Rcode.is_some {
         var lift_ret_val_val_Rcode_val string
-        lift_ret_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.rcode.val.ptr)), C.int(lift_ret_val_ptr.rcode.val.len))
+        lift_ret_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.Rcode.val.ptr)), C.int(lift_ret_val_ptr.Rcode.val.len))
         lift_ret_val_val_Rcode.Set(lift_ret_val_val_Rcode_val)
       } else {
         lift_ret_val_val_Rcode.Unset()
       }
       lift_ret_val_val.Rcode = lift_ret_val_val_Rcode
       var lift_ret_val_val_InfoCode Option[uint16]
-      if lift_ret_val_ptr.info_code.is_some {
+      if lift_ret_val_ptr.InfoCode.is_some {
         var lift_ret_val_val_InfoCode_val uint16
-        lift_ret_val_val_InfoCode_val = uint16(lift_ret_val_ptr.info_code.val)
+        lift_ret_val_val_InfoCode_val = uint16(lift_ret_val_ptr.InfoCode.val)
         lift_ret_val_val_InfoCode.Set(lift_ret_val_val_InfoCode_val)
       } else {
         lift_ret_val_val_InfoCode.Unset()
@@ -1374,18 +1374,18 @@ func WasiHttp0_2_0_TypesHttpErrorCode(err WasiHttp0_2_0_TypesIoError) Option[Was
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_tls_alert_received_payload_t)(unsafe.Pointer(&ret.val.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesTlsAlertReceivedPayload
       var lift_ret_val_val_AlertId Option[uint8]
-      if lift_ret_val_ptr.alert_id.is_some {
+      if lift_ret_val_ptr.AlertId.is_some {
         var lift_ret_val_val_AlertId_val uint8
-        lift_ret_val_val_AlertId_val = uint8(lift_ret_val_ptr.alert_id.val)
+        lift_ret_val_val_AlertId_val = uint8(lift_ret_val_ptr.AlertId.val)
         lift_ret_val_val_AlertId.Set(lift_ret_val_val_AlertId_val)
       } else {
         lift_ret_val_val_AlertId.Unset()
       }
       lift_ret_val_val.AlertId = lift_ret_val_val_AlertId
       var lift_ret_val_val_AlertMessage Option[string]
-      if lift_ret_val_ptr.alert_message.is_some {
+      if lift_ret_val_ptr.AlertMessage.is_some {
         var lift_ret_val_val_AlertMessage_val string
-        lift_ret_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.alert_message.val.ptr)), C.int(lift_ret_val_ptr.alert_message.val.len))
+        lift_ret_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.AlertMessage.val.ptr)), C.int(lift_ret_val_ptr.AlertMessage.val.len))
         lift_ret_val_val_AlertMessage.Set(lift_ret_val_val_AlertMessage_val)
       } else {
         lift_ret_val_val_AlertMessage.Unset()
@@ -1438,18 +1438,18 @@ func WasiHttp0_2_0_TypesHttpErrorCode(err WasiHttp0_2_0_TypesIoError) Option[Was
       if lift_ret_val_ptr.is_some {
         var lift_ret_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
         var lift_ret_val_val_val_FieldName Option[string]
-        if lift_ret_val_ptr.val.field_name.is_some {
+        if lift_ret_val_ptr.val.FieldName.is_some {
           var lift_ret_val_val_val_FieldName_val string
-          lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.val.field_name.val.ptr)), C.int(lift_ret_val_ptr.val.field_name.val.len))
+          lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.val.FieldName.val.ptr)), C.int(lift_ret_val_ptr.val.FieldName.val.len))
           lift_ret_val_val_val_FieldName.Set(lift_ret_val_val_val_FieldName_val)
         } else {
           lift_ret_val_val_val_FieldName.Unset()
         }
         lift_ret_val_val_val.FieldName = lift_ret_val_val_val_FieldName
         var lift_ret_val_val_val_FieldSize Option[uint32]
-        if lift_ret_val_ptr.val.field_size.is_some {
+        if lift_ret_val_ptr.val.FieldSize.is_some {
           var lift_ret_val_val_val_FieldSize_val uint32
-          lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_ptr.val.field_size.val)
+          lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_ptr.val.FieldSize.val)
           lift_ret_val_val_val_FieldSize.Set(lift_ret_val_val_val_FieldSize_val)
         } else {
           lift_ret_val_val_val_FieldSize.Unset()
@@ -1477,18 +1477,18 @@ func WasiHttp0_2_0_TypesHttpErrorCode(err WasiHttp0_2_0_TypesIoError) Option[Was
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&ret.val.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_FieldName Option[string]
-      if lift_ret_val_ptr.field_name.is_some {
+      if lift_ret_val_ptr.FieldName.is_some {
         var lift_ret_val_val_FieldName_val string
-        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_ptr.field_name.val.len))
+        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_ptr.FieldName.val.len))
         lift_ret_val_val_FieldName.Set(lift_ret_val_val_FieldName_val)
       } else {
         lift_ret_val_val_FieldName.Unset()
       }
       lift_ret_val_val.FieldName = lift_ret_val_val_FieldName
       var lift_ret_val_val_FieldSize Option[uint32]
-      if lift_ret_val_ptr.field_size.is_some {
+      if lift_ret_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_FieldSize_val uint32
-        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.field_size.val)
+        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.FieldSize.val)
         lift_ret_val_val_FieldSize.Set(lift_ret_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_FieldSize.Unset()
@@ -1515,18 +1515,18 @@ func WasiHttp0_2_0_TypesHttpErrorCode(err WasiHttp0_2_0_TypesIoError) Option[Was
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&ret.val.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_FieldName Option[string]
-      if lift_ret_val_ptr.field_name.is_some {
+      if lift_ret_val_ptr.FieldName.is_some {
         var lift_ret_val_val_FieldName_val string
-        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_ptr.field_name.val.len))
+        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_ptr.FieldName.val.len))
         lift_ret_val_val_FieldName.Set(lift_ret_val_val_FieldName_val)
       } else {
         lift_ret_val_val_FieldName.Unset()
       }
       lift_ret_val_val.FieldName = lift_ret_val_val_FieldName
       var lift_ret_val_val_FieldSize Option[uint32]
-      if lift_ret_val_ptr.field_size.is_some {
+      if lift_ret_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_FieldSize_val uint32
-        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.field_size.val)
+        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.FieldSize.val)
         lift_ret_val_val_FieldSize.Set(lift_ret_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_FieldSize.Unset()
@@ -1562,18 +1562,18 @@ func WasiHttp0_2_0_TypesHttpErrorCode(err WasiHttp0_2_0_TypesIoError) Option[Was
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&ret.val.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_FieldName Option[string]
-      if lift_ret_val_ptr.field_name.is_some {
+      if lift_ret_val_ptr.FieldName.is_some {
         var lift_ret_val_val_FieldName_val string
-        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_ptr.field_name.val.len))
+        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_ptr.FieldName.val.len))
         lift_ret_val_val_FieldName.Set(lift_ret_val_val_FieldName_val)
       } else {
         lift_ret_val_val_FieldName.Unset()
       }
       lift_ret_val_val.FieldName = lift_ret_val_val_FieldName
       var lift_ret_val_val_FieldSize Option[uint32]
-      if lift_ret_val_ptr.field_size.is_some {
+      if lift_ret_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_FieldSize_val uint32
-        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.field_size.val)
+        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.FieldSize.val)
         lift_ret_val_val_FieldSize.Set(lift_ret_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_FieldSize.Unset()
@@ -2951,18 +2951,18 @@ func (self WasiHttp0_2_0_TypesFutureTrailers) Get() Option[Result[Result[Option[
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_dns_error_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesDnsErrorPayload
           var lift_ret_val_val_val_val_Rcode Option[string]
-          if lift_ret_val_val_val_ptr.rcode.is_some {
+          if lift_ret_val_val_val_ptr.Rcode.is_some {
             var lift_ret_val_val_val_val_Rcode_val string
-            lift_ret_val_val_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.rcode.val.ptr)), C.int(lift_ret_val_val_val_ptr.rcode.val.len))
+            lift_ret_val_val_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.Rcode.val.ptr)), C.int(lift_ret_val_val_val_ptr.Rcode.val.len))
             lift_ret_val_val_val_val_Rcode.Set(lift_ret_val_val_val_val_Rcode_val)
           } else {
             lift_ret_val_val_val_val_Rcode.Unset()
           }
           lift_ret_val_val_val_val.Rcode = lift_ret_val_val_val_val_Rcode
           var lift_ret_val_val_val_val_InfoCode Option[uint16]
-          if lift_ret_val_val_val_ptr.info_code.is_some {
+          if lift_ret_val_val_val_ptr.InfoCode.is_some {
             var lift_ret_val_val_val_val_InfoCode_val uint16
-            lift_ret_val_val_val_val_InfoCode_val = uint16(lift_ret_val_val_val_ptr.info_code.val)
+            lift_ret_val_val_val_val_InfoCode_val = uint16(lift_ret_val_val_val_ptr.InfoCode.val)
             lift_ret_val_val_val_val_InfoCode.Set(lift_ret_val_val_val_val_InfoCode_val)
           } else {
             lift_ret_val_val_val_val_InfoCode.Unset()
@@ -3010,18 +3010,18 @@ func (self WasiHttp0_2_0_TypesFutureTrailers) Get() Option[Result[Result[Option[
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_tls_alert_received_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesTlsAlertReceivedPayload
           var lift_ret_val_val_val_val_AlertId Option[uint8]
-          if lift_ret_val_val_val_ptr.alert_id.is_some {
+          if lift_ret_val_val_val_ptr.AlertId.is_some {
             var lift_ret_val_val_val_val_AlertId_val uint8
-            lift_ret_val_val_val_val_AlertId_val = uint8(lift_ret_val_val_val_ptr.alert_id.val)
+            lift_ret_val_val_val_val_AlertId_val = uint8(lift_ret_val_val_val_ptr.AlertId.val)
             lift_ret_val_val_val_val_AlertId.Set(lift_ret_val_val_val_val_AlertId_val)
           } else {
             lift_ret_val_val_val_val_AlertId.Unset()
           }
           lift_ret_val_val_val_val.AlertId = lift_ret_val_val_val_val_AlertId
           var lift_ret_val_val_val_val_AlertMessage Option[string]
-          if lift_ret_val_val_val_ptr.alert_message.is_some {
+          if lift_ret_val_val_val_ptr.AlertMessage.is_some {
             var lift_ret_val_val_val_val_AlertMessage_val string
-            lift_ret_val_val_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.alert_message.val.ptr)), C.int(lift_ret_val_val_val_ptr.alert_message.val.len))
+            lift_ret_val_val_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.AlertMessage.val.ptr)), C.int(lift_ret_val_val_val_ptr.AlertMessage.val.len))
             lift_ret_val_val_val_val_AlertMessage.Set(lift_ret_val_val_val_val_AlertMessage_val)
           } else {
             lift_ret_val_val_val_val_AlertMessage.Unset()
@@ -3074,18 +3074,18 @@ func (self WasiHttp0_2_0_TypesFutureTrailers) Get() Option[Result[Result[Option[
           if lift_ret_val_val_val_ptr.is_some {
             var lift_ret_val_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
             var lift_ret_val_val_val_val_val_FieldName Option[string]
-            if lift_ret_val_val_val_ptr.val.field_name.is_some {
+            if lift_ret_val_val_val_ptr.val.FieldName.is_some {
               var lift_ret_val_val_val_val_val_FieldName_val string
-              lift_ret_val_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.val.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.val.field_name.val.len))
+              lift_ret_val_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.val.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.val.FieldName.val.len))
               lift_ret_val_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_val_FieldName_val)
             } else {
               lift_ret_val_val_val_val_val_FieldName.Unset()
             }
             lift_ret_val_val_val_val_val.FieldName = lift_ret_val_val_val_val_val_FieldName
             var lift_ret_val_val_val_val_val_FieldSize Option[uint32]
-            if lift_ret_val_val_val_ptr.val.field_size.is_some {
+            if lift_ret_val_val_val_ptr.val.FieldSize.is_some {
               var lift_ret_val_val_val_val_val_FieldSize_val uint32
-              lift_ret_val_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.val.field_size.val)
+              lift_ret_val_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.val.FieldSize.val)
               lift_ret_val_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_val_FieldSize_val)
             } else {
               lift_ret_val_val_val_val_val_FieldSize.Unset()
@@ -3113,18 +3113,18 @@ func (self WasiHttp0_2_0_TypesFutureTrailers) Get() Option[Result[Result[Option[
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
           var lift_ret_val_val_val_val_FieldName Option[string]
-          if lift_ret_val_val_val_ptr.field_name.is_some {
+          if lift_ret_val_val_val_ptr.FieldName.is_some {
             var lift_ret_val_val_val_val_FieldName_val string
-            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.field_name.val.len))
+            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.FieldName.val.len))
             lift_ret_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_FieldName_val)
           } else {
             lift_ret_val_val_val_val_FieldName.Unset()
           }
           lift_ret_val_val_val_val.FieldName = lift_ret_val_val_val_val_FieldName
           var lift_ret_val_val_val_val_FieldSize Option[uint32]
-          if lift_ret_val_val_val_ptr.field_size.is_some {
+          if lift_ret_val_val_val_ptr.FieldSize.is_some {
             var lift_ret_val_val_val_val_FieldSize_val uint32
-            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.field_size.val)
+            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.FieldSize.val)
             lift_ret_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_FieldSize_val)
           } else {
             lift_ret_val_val_val_val_FieldSize.Unset()
@@ -3151,18 +3151,18 @@ func (self WasiHttp0_2_0_TypesFutureTrailers) Get() Option[Result[Result[Option[
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
           var lift_ret_val_val_val_val_FieldName Option[string]
-          if lift_ret_val_val_val_ptr.field_name.is_some {
+          if lift_ret_val_val_val_ptr.FieldName.is_some {
             var lift_ret_val_val_val_val_FieldName_val string
-            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.field_name.val.len))
+            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.FieldName.val.len))
             lift_ret_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_FieldName_val)
           } else {
             lift_ret_val_val_val_val_FieldName.Unset()
           }
           lift_ret_val_val_val_val.FieldName = lift_ret_val_val_val_val_FieldName
           var lift_ret_val_val_val_val_FieldSize Option[uint32]
-          if lift_ret_val_val_val_ptr.field_size.is_some {
+          if lift_ret_val_val_val_ptr.FieldSize.is_some {
             var lift_ret_val_val_val_val_FieldSize_val uint32
-            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.field_size.val)
+            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.FieldSize.val)
             lift_ret_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_FieldSize_val)
           } else {
             lift_ret_val_val_val_val_FieldSize.Unset()
@@ -3198,18 +3198,18 @@ func (self WasiHttp0_2_0_TypesFutureTrailers) Get() Option[Result[Result[Option[
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
           var lift_ret_val_val_val_val_FieldName Option[string]
-          if lift_ret_val_val_val_ptr.field_name.is_some {
+          if lift_ret_val_val_val_ptr.FieldName.is_some {
             var lift_ret_val_val_val_val_FieldName_val string
-            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.field_name.val.len))
+            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.FieldName.val.len))
             lift_ret_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_FieldName_val)
           } else {
             lift_ret_val_val_val_val_FieldName.Unset()
           }
           lift_ret_val_val_val_val.FieldName = lift_ret_val_val_val_val_FieldName
           var lift_ret_val_val_val_val_FieldSize Option[uint32]
-          if lift_ret_val_val_val_ptr.field_size.is_some {
+          if lift_ret_val_val_val_ptr.FieldSize.is_some {
             var lift_ret_val_val_val_val_FieldSize_val uint32
-            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.field_size.val)
+            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.FieldSize.val)
             lift_ret_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_FieldSize_val)
           } else {
             lift_ret_val_val_val_val_FieldSize.Unset()
@@ -3397,18 +3397,18 @@ func StaticOutgoingBodyFinish(this WasiHttp0_2_0_TypesOutgoingBody, trailers Opt
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_dns_error_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesDnsErrorPayload
       var lift_ret_val_val_Rcode Option[string]
-      if lift_ret_val_ptr.rcode.is_some {
+      if lift_ret_val_ptr.Rcode.is_some {
         var lift_ret_val_val_Rcode_val string
-        lift_ret_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.rcode.val.ptr)), C.int(lift_ret_val_ptr.rcode.val.len))
+        lift_ret_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.Rcode.val.ptr)), C.int(lift_ret_val_ptr.Rcode.val.len))
         lift_ret_val_val_Rcode.Set(lift_ret_val_val_Rcode_val)
       } else {
         lift_ret_val_val_Rcode.Unset()
       }
       lift_ret_val_val.Rcode = lift_ret_val_val_Rcode
       var lift_ret_val_val_InfoCode Option[uint16]
-      if lift_ret_val_ptr.info_code.is_some {
+      if lift_ret_val_ptr.InfoCode.is_some {
         var lift_ret_val_val_InfoCode_val uint16
-        lift_ret_val_val_InfoCode_val = uint16(lift_ret_val_ptr.info_code.val)
+        lift_ret_val_val_InfoCode_val = uint16(lift_ret_val_ptr.InfoCode.val)
         lift_ret_val_val_InfoCode.Set(lift_ret_val_val_InfoCode_val)
       } else {
         lift_ret_val_val_InfoCode.Unset()
@@ -3456,18 +3456,18 @@ func StaticOutgoingBodyFinish(this WasiHttp0_2_0_TypesOutgoingBody, trailers Opt
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_tls_alert_received_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesTlsAlertReceivedPayload
       var lift_ret_val_val_AlertId Option[uint8]
-      if lift_ret_val_ptr.alert_id.is_some {
+      if lift_ret_val_ptr.AlertId.is_some {
         var lift_ret_val_val_AlertId_val uint8
-        lift_ret_val_val_AlertId_val = uint8(lift_ret_val_ptr.alert_id.val)
+        lift_ret_val_val_AlertId_val = uint8(lift_ret_val_ptr.AlertId.val)
         lift_ret_val_val_AlertId.Set(lift_ret_val_val_AlertId_val)
       } else {
         lift_ret_val_val_AlertId.Unset()
       }
       lift_ret_val_val.AlertId = lift_ret_val_val_AlertId
       var lift_ret_val_val_AlertMessage Option[string]
-      if lift_ret_val_ptr.alert_message.is_some {
+      if lift_ret_val_ptr.AlertMessage.is_some {
         var lift_ret_val_val_AlertMessage_val string
-        lift_ret_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.alert_message.val.ptr)), C.int(lift_ret_val_ptr.alert_message.val.len))
+        lift_ret_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.AlertMessage.val.ptr)), C.int(lift_ret_val_ptr.AlertMessage.val.len))
         lift_ret_val_val_AlertMessage.Set(lift_ret_val_val_AlertMessage_val)
       } else {
         lift_ret_val_val_AlertMessage.Unset()
@@ -3520,18 +3520,18 @@ func StaticOutgoingBodyFinish(this WasiHttp0_2_0_TypesOutgoingBody, trailers Opt
       if lift_ret_val_ptr.is_some {
         var lift_ret_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
         var lift_ret_val_val_val_FieldName Option[string]
-        if lift_ret_val_ptr.val.field_name.is_some {
+        if lift_ret_val_ptr.val.FieldName.is_some {
           var lift_ret_val_val_val_FieldName_val string
-          lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.val.field_name.val.ptr)), C.int(lift_ret_val_ptr.val.field_name.val.len))
+          lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.val.FieldName.val.ptr)), C.int(lift_ret_val_ptr.val.FieldName.val.len))
           lift_ret_val_val_val_FieldName.Set(lift_ret_val_val_val_FieldName_val)
         } else {
           lift_ret_val_val_val_FieldName.Unset()
         }
         lift_ret_val_val_val.FieldName = lift_ret_val_val_val_FieldName
         var lift_ret_val_val_val_FieldSize Option[uint32]
-        if lift_ret_val_ptr.val.field_size.is_some {
+        if lift_ret_val_ptr.val.FieldSize.is_some {
           var lift_ret_val_val_val_FieldSize_val uint32
-          lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_ptr.val.field_size.val)
+          lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_ptr.val.FieldSize.val)
           lift_ret_val_val_val_FieldSize.Set(lift_ret_val_val_val_FieldSize_val)
         } else {
           lift_ret_val_val_val_FieldSize.Unset()
@@ -3559,18 +3559,18 @@ func StaticOutgoingBodyFinish(this WasiHttp0_2_0_TypesOutgoingBody, trailers Opt
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_FieldName Option[string]
-      if lift_ret_val_ptr.field_name.is_some {
+      if lift_ret_val_ptr.FieldName.is_some {
         var lift_ret_val_val_FieldName_val string
-        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_ptr.field_name.val.len))
+        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_ptr.FieldName.val.len))
         lift_ret_val_val_FieldName.Set(lift_ret_val_val_FieldName_val)
       } else {
         lift_ret_val_val_FieldName.Unset()
       }
       lift_ret_val_val.FieldName = lift_ret_val_val_FieldName
       var lift_ret_val_val_FieldSize Option[uint32]
-      if lift_ret_val_ptr.field_size.is_some {
+      if lift_ret_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_FieldSize_val uint32
-        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.field_size.val)
+        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.FieldSize.val)
         lift_ret_val_val_FieldSize.Set(lift_ret_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_FieldSize.Unset()
@@ -3597,18 +3597,18 @@ func StaticOutgoingBodyFinish(this WasiHttp0_2_0_TypesOutgoingBody, trailers Opt
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_FieldName Option[string]
-      if lift_ret_val_ptr.field_name.is_some {
+      if lift_ret_val_ptr.FieldName.is_some {
         var lift_ret_val_val_FieldName_val string
-        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_ptr.field_name.val.len))
+        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_ptr.FieldName.val.len))
         lift_ret_val_val_FieldName.Set(lift_ret_val_val_FieldName_val)
       } else {
         lift_ret_val_val_FieldName.Unset()
       }
       lift_ret_val_val.FieldName = lift_ret_val_val_FieldName
       var lift_ret_val_val_FieldSize Option[uint32]
-      if lift_ret_val_ptr.field_size.is_some {
+      if lift_ret_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_FieldSize_val uint32
-        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.field_size.val)
+        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.FieldSize.val)
         lift_ret_val_val_FieldSize.Set(lift_ret_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_FieldSize.Unset()
@@ -3644,18 +3644,18 @@ func StaticOutgoingBodyFinish(this WasiHttp0_2_0_TypesOutgoingBody, trailers Opt
       lift_ret_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_FieldName Option[string]
-      if lift_ret_val_ptr.field_name.is_some {
+      if lift_ret_val_ptr.FieldName.is_some {
         var lift_ret_val_val_FieldName_val string
-        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_ptr.field_name.val.len))
+        lift_ret_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_ptr.FieldName.val.len))
         lift_ret_val_val_FieldName.Set(lift_ret_val_val_FieldName_val)
       } else {
         lift_ret_val_val_FieldName.Unset()
       }
       lift_ret_val_val.FieldName = lift_ret_val_val_FieldName
       var lift_ret_val_val_FieldSize Option[uint32]
-      if lift_ret_val_ptr.field_size.is_some {
+      if lift_ret_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_FieldSize_val uint32
-        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.field_size.val)
+        lift_ret_val_val_FieldSize_val = uint32(lift_ret_val_ptr.FieldSize.val)
         lift_ret_val_val_FieldSize.Set(lift_ret_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_FieldSize.Unset()
@@ -3753,18 +3753,18 @@ func (self WasiHttp0_2_0_TypesFutureIncomingResponse) Get() Option[Result[Result
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_dns_error_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesDnsErrorPayload
           var lift_ret_val_val_val_val_Rcode Option[string]
-          if lift_ret_val_val_val_ptr.rcode.is_some {
+          if lift_ret_val_val_val_ptr.Rcode.is_some {
             var lift_ret_val_val_val_val_Rcode_val string
-            lift_ret_val_val_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.rcode.val.ptr)), C.int(lift_ret_val_val_val_ptr.rcode.val.len))
+            lift_ret_val_val_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.Rcode.val.ptr)), C.int(lift_ret_val_val_val_ptr.Rcode.val.len))
             lift_ret_val_val_val_val_Rcode.Set(lift_ret_val_val_val_val_Rcode_val)
           } else {
             lift_ret_val_val_val_val_Rcode.Unset()
           }
           lift_ret_val_val_val_val.Rcode = lift_ret_val_val_val_val_Rcode
           var lift_ret_val_val_val_val_InfoCode Option[uint16]
-          if lift_ret_val_val_val_ptr.info_code.is_some {
+          if lift_ret_val_val_val_ptr.InfoCode.is_some {
             var lift_ret_val_val_val_val_InfoCode_val uint16
-            lift_ret_val_val_val_val_InfoCode_val = uint16(lift_ret_val_val_val_ptr.info_code.val)
+            lift_ret_val_val_val_val_InfoCode_val = uint16(lift_ret_val_val_val_ptr.InfoCode.val)
             lift_ret_val_val_val_val_InfoCode.Set(lift_ret_val_val_val_val_InfoCode_val)
           } else {
             lift_ret_val_val_val_val_InfoCode.Unset()
@@ -3812,18 +3812,18 @@ func (self WasiHttp0_2_0_TypesFutureIncomingResponse) Get() Option[Result[Result
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_tls_alert_received_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesTlsAlertReceivedPayload
           var lift_ret_val_val_val_val_AlertId Option[uint8]
-          if lift_ret_val_val_val_ptr.alert_id.is_some {
+          if lift_ret_val_val_val_ptr.AlertId.is_some {
             var lift_ret_val_val_val_val_AlertId_val uint8
-            lift_ret_val_val_val_val_AlertId_val = uint8(lift_ret_val_val_val_ptr.alert_id.val)
+            lift_ret_val_val_val_val_AlertId_val = uint8(lift_ret_val_val_val_ptr.AlertId.val)
             lift_ret_val_val_val_val_AlertId.Set(lift_ret_val_val_val_val_AlertId_val)
           } else {
             lift_ret_val_val_val_val_AlertId.Unset()
           }
           lift_ret_val_val_val_val.AlertId = lift_ret_val_val_val_val_AlertId
           var lift_ret_val_val_val_val_AlertMessage Option[string]
-          if lift_ret_val_val_val_ptr.alert_message.is_some {
+          if lift_ret_val_val_val_ptr.AlertMessage.is_some {
             var lift_ret_val_val_val_val_AlertMessage_val string
-            lift_ret_val_val_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.alert_message.val.ptr)), C.int(lift_ret_val_val_val_ptr.alert_message.val.len))
+            lift_ret_val_val_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.AlertMessage.val.ptr)), C.int(lift_ret_val_val_val_ptr.AlertMessage.val.len))
             lift_ret_val_val_val_val_AlertMessage.Set(lift_ret_val_val_val_val_AlertMessage_val)
           } else {
             lift_ret_val_val_val_val_AlertMessage.Unset()
@@ -3876,18 +3876,18 @@ func (self WasiHttp0_2_0_TypesFutureIncomingResponse) Get() Option[Result[Result
           if lift_ret_val_val_val_ptr.is_some {
             var lift_ret_val_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
             var lift_ret_val_val_val_val_val_FieldName Option[string]
-            if lift_ret_val_val_val_ptr.val.field_name.is_some {
+            if lift_ret_val_val_val_ptr.val.FieldName.is_some {
               var lift_ret_val_val_val_val_val_FieldName_val string
-              lift_ret_val_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.val.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.val.field_name.val.len))
+              lift_ret_val_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.val.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.val.FieldName.val.len))
               lift_ret_val_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_val_FieldName_val)
             } else {
               lift_ret_val_val_val_val_val_FieldName.Unset()
             }
             lift_ret_val_val_val_val_val.FieldName = lift_ret_val_val_val_val_val_FieldName
             var lift_ret_val_val_val_val_val_FieldSize Option[uint32]
-            if lift_ret_val_val_val_ptr.val.field_size.is_some {
+            if lift_ret_val_val_val_ptr.val.FieldSize.is_some {
               var lift_ret_val_val_val_val_val_FieldSize_val uint32
-              lift_ret_val_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.val.field_size.val)
+              lift_ret_val_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.val.FieldSize.val)
               lift_ret_val_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_val_FieldSize_val)
             } else {
               lift_ret_val_val_val_val_val_FieldSize.Unset()
@@ -3915,18 +3915,18 @@ func (self WasiHttp0_2_0_TypesFutureIncomingResponse) Get() Option[Result[Result
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
           var lift_ret_val_val_val_val_FieldName Option[string]
-          if lift_ret_val_val_val_ptr.field_name.is_some {
+          if lift_ret_val_val_val_ptr.FieldName.is_some {
             var lift_ret_val_val_val_val_FieldName_val string
-            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.field_name.val.len))
+            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.FieldName.val.len))
             lift_ret_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_FieldName_val)
           } else {
             lift_ret_val_val_val_val_FieldName.Unset()
           }
           lift_ret_val_val_val_val.FieldName = lift_ret_val_val_val_val_FieldName
           var lift_ret_val_val_val_val_FieldSize Option[uint32]
-          if lift_ret_val_val_val_ptr.field_size.is_some {
+          if lift_ret_val_val_val_ptr.FieldSize.is_some {
             var lift_ret_val_val_val_val_FieldSize_val uint32
-            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.field_size.val)
+            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.FieldSize.val)
             lift_ret_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_FieldSize_val)
           } else {
             lift_ret_val_val_val_val_FieldSize.Unset()
@@ -3953,18 +3953,18 @@ func (self WasiHttp0_2_0_TypesFutureIncomingResponse) Get() Option[Result[Result
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
           var lift_ret_val_val_val_val_FieldName Option[string]
-          if lift_ret_val_val_val_ptr.field_name.is_some {
+          if lift_ret_val_val_val_ptr.FieldName.is_some {
             var lift_ret_val_val_val_val_FieldName_val string
-            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.field_name.val.len))
+            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.FieldName.val.len))
             lift_ret_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_FieldName_val)
           } else {
             lift_ret_val_val_val_val_FieldName.Unset()
           }
           lift_ret_val_val_val_val.FieldName = lift_ret_val_val_val_val_FieldName
           var lift_ret_val_val_val_val_FieldSize Option[uint32]
-          if lift_ret_val_val_val_ptr.field_size.is_some {
+          if lift_ret_val_val_val_ptr.FieldSize.is_some {
             var lift_ret_val_val_val_val_FieldSize_val uint32
-            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.field_size.val)
+            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.FieldSize.val)
             lift_ret_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_FieldSize_val)
           } else {
             lift_ret_val_val_val_val_FieldSize.Unset()
@@ -4000,18 +4000,18 @@ func (self WasiHttp0_2_0_TypesFutureIncomingResponse) Get() Option[Result[Result
           lift_ret_val_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_val_val_ptr.val))
           var lift_ret_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
           var lift_ret_val_val_val_val_FieldName Option[string]
-          if lift_ret_val_val_val_ptr.field_name.is_some {
+          if lift_ret_val_val_val_ptr.FieldName.is_some {
             var lift_ret_val_val_val_val_FieldName_val string
-            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_val_ptr.field_name.val.len))
+            lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_val_ptr.FieldName.val.len))
             lift_ret_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_FieldName_val)
           } else {
             lift_ret_val_val_val_val_FieldName.Unset()
           }
           lift_ret_val_val_val_val.FieldName = lift_ret_val_val_val_val_FieldName
           var lift_ret_val_val_val_val_FieldSize Option[uint32]
-          if lift_ret_val_val_val_ptr.field_size.is_some {
+          if lift_ret_val_val_val_ptr.FieldSize.is_some {
             var lift_ret_val_val_val_val_FieldSize_val uint32
-            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.field_size.val)
+            lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_val_ptr.FieldSize.val)
             lift_ret_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_FieldSize_val)
           } else {
             lift_ret_val_val_val_val_FieldSize.Unset()
@@ -4116,18 +4116,18 @@ func WasiHttp0_2_0_OutgoingHandlerHandle(request WasiHttp0_2_0_OutgoingHandlerOu
       lift_ret_val_val_ptr := *(*C.wasi_http_0_2_0_types_dns_error_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiHttp0_2_0_TypesDnsErrorPayload
       var lift_ret_val_val_val_Rcode Option[string]
-      if lift_ret_val_val_ptr.rcode.is_some {
+      if lift_ret_val_val_ptr.Rcode.is_some {
         var lift_ret_val_val_val_Rcode_val string
-        lift_ret_val_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.rcode.val.ptr)), C.int(lift_ret_val_val_ptr.rcode.val.len))
+        lift_ret_val_val_val_Rcode_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.Rcode.val.ptr)), C.int(lift_ret_val_val_ptr.Rcode.val.len))
         lift_ret_val_val_val_Rcode.Set(lift_ret_val_val_val_Rcode_val)
       } else {
         lift_ret_val_val_val_Rcode.Unset()
       }
       lift_ret_val_val_val.Rcode = lift_ret_val_val_val_Rcode
       var lift_ret_val_val_val_InfoCode Option[uint16]
-      if lift_ret_val_val_ptr.info_code.is_some {
+      if lift_ret_val_val_ptr.InfoCode.is_some {
         var lift_ret_val_val_val_InfoCode_val uint16
-        lift_ret_val_val_val_InfoCode_val = uint16(lift_ret_val_val_ptr.info_code.val)
+        lift_ret_val_val_val_InfoCode_val = uint16(lift_ret_val_val_ptr.InfoCode.val)
         lift_ret_val_val_val_InfoCode.Set(lift_ret_val_val_val_InfoCode_val)
       } else {
         lift_ret_val_val_val_InfoCode.Unset()
@@ -4175,18 +4175,18 @@ func WasiHttp0_2_0_OutgoingHandlerHandle(request WasiHttp0_2_0_OutgoingHandlerOu
       lift_ret_val_val_ptr := *(*C.wasi_http_0_2_0_types_tls_alert_received_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiHttp0_2_0_TypesTlsAlertReceivedPayload
       var lift_ret_val_val_val_AlertId Option[uint8]
-      if lift_ret_val_val_ptr.alert_id.is_some {
+      if lift_ret_val_val_ptr.AlertId.is_some {
         var lift_ret_val_val_val_AlertId_val uint8
-        lift_ret_val_val_val_AlertId_val = uint8(lift_ret_val_val_ptr.alert_id.val)
+        lift_ret_val_val_val_AlertId_val = uint8(lift_ret_val_val_ptr.AlertId.val)
         lift_ret_val_val_val_AlertId.Set(lift_ret_val_val_val_AlertId_val)
       } else {
         lift_ret_val_val_val_AlertId.Unset()
       }
       lift_ret_val_val_val.AlertId = lift_ret_val_val_val_AlertId
       var lift_ret_val_val_val_AlertMessage Option[string]
-      if lift_ret_val_val_ptr.alert_message.is_some {
+      if lift_ret_val_val_ptr.AlertMessage.is_some {
         var lift_ret_val_val_val_AlertMessage_val string
-        lift_ret_val_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.alert_message.val.ptr)), C.int(lift_ret_val_val_ptr.alert_message.val.len))
+        lift_ret_val_val_val_AlertMessage_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.AlertMessage.val.ptr)), C.int(lift_ret_val_val_ptr.AlertMessage.val.len))
         lift_ret_val_val_val_AlertMessage.Set(lift_ret_val_val_val_AlertMessage_val)
       } else {
         lift_ret_val_val_val_AlertMessage.Unset()
@@ -4239,18 +4239,18 @@ func WasiHttp0_2_0_OutgoingHandlerHandle(request WasiHttp0_2_0_OutgoingHandlerOu
       if lift_ret_val_val_ptr.is_some {
         var lift_ret_val_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
         var lift_ret_val_val_val_val_FieldName Option[string]
-        if lift_ret_val_val_ptr.val.field_name.is_some {
+        if lift_ret_val_val_ptr.val.FieldName.is_some {
           var lift_ret_val_val_val_val_FieldName_val string
-          lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.val.field_name.val.ptr)), C.int(lift_ret_val_val_ptr.val.field_name.val.len))
+          lift_ret_val_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.val.FieldName.val.ptr)), C.int(lift_ret_val_val_ptr.val.FieldName.val.len))
           lift_ret_val_val_val_val_FieldName.Set(lift_ret_val_val_val_val_FieldName_val)
         } else {
           lift_ret_val_val_val_val_FieldName.Unset()
         }
         lift_ret_val_val_val_val.FieldName = lift_ret_val_val_val_val_FieldName
         var lift_ret_val_val_val_val_FieldSize Option[uint32]
-        if lift_ret_val_val_ptr.val.field_size.is_some {
+        if lift_ret_val_val_ptr.val.FieldSize.is_some {
           var lift_ret_val_val_val_val_FieldSize_val uint32
-          lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.val.field_size.val)
+          lift_ret_val_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.val.FieldSize.val)
           lift_ret_val_val_val_val_FieldSize.Set(lift_ret_val_val_val_val_FieldSize_val)
         } else {
           lift_ret_val_val_val_val_FieldSize.Unset()
@@ -4278,18 +4278,18 @@ func WasiHttp0_2_0_OutgoingHandlerHandle(request WasiHttp0_2_0_OutgoingHandlerOu
       lift_ret_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_val_FieldName Option[string]
-      if lift_ret_val_val_ptr.field_name.is_some {
+      if lift_ret_val_val_ptr.FieldName.is_some {
         var lift_ret_val_val_val_FieldName_val string
-        lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_ptr.field_name.val.len))
+        lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_ptr.FieldName.val.len))
         lift_ret_val_val_val_FieldName.Set(lift_ret_val_val_val_FieldName_val)
       } else {
         lift_ret_val_val_val_FieldName.Unset()
       }
       lift_ret_val_val_val.FieldName = lift_ret_val_val_val_FieldName
       var lift_ret_val_val_val_FieldSize Option[uint32]
-      if lift_ret_val_val_ptr.field_size.is_some {
+      if lift_ret_val_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_val_FieldSize_val uint32
-        lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.field_size.val)
+        lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.FieldSize.val)
         lift_ret_val_val_val_FieldSize.Set(lift_ret_val_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_val_FieldSize.Unset()
@@ -4316,18 +4316,18 @@ func WasiHttp0_2_0_OutgoingHandlerHandle(request WasiHttp0_2_0_OutgoingHandlerOu
       lift_ret_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_val_FieldName Option[string]
-      if lift_ret_val_val_ptr.field_name.is_some {
+      if lift_ret_val_val_ptr.FieldName.is_some {
         var lift_ret_val_val_val_FieldName_val string
-        lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_ptr.field_name.val.len))
+        lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_ptr.FieldName.val.len))
         lift_ret_val_val_val_FieldName.Set(lift_ret_val_val_val_FieldName_val)
       } else {
         lift_ret_val_val_val_FieldName.Unset()
       }
       lift_ret_val_val_val.FieldName = lift_ret_val_val_val_FieldName
       var lift_ret_val_val_val_FieldSize Option[uint32]
-      if lift_ret_val_val_ptr.field_size.is_some {
+      if lift_ret_val_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_val_FieldSize_val uint32
-        lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.field_size.val)
+        lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.FieldSize.val)
         lift_ret_val_val_val_FieldSize.Set(lift_ret_val_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_val_FieldSize.Unset()
@@ -4363,18 +4363,18 @@ func WasiHttp0_2_0_OutgoingHandlerHandle(request WasiHttp0_2_0_OutgoingHandlerOu
       lift_ret_val_val_ptr := *(*C.wasi_http_0_2_0_types_field_size_payload_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiHttp0_2_0_TypesFieldSizePayload
       var lift_ret_val_val_val_FieldName Option[string]
-      if lift_ret_val_val_ptr.field_name.is_some {
+      if lift_ret_val_val_ptr.FieldName.is_some {
         var lift_ret_val_val_val_FieldName_val string
-        lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.field_name.val.ptr)), C.int(lift_ret_val_val_ptr.field_name.val.len))
+        lift_ret_val_val_val_FieldName_val = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_ptr.FieldName.val.ptr)), C.int(lift_ret_val_val_ptr.FieldName.val.len))
         lift_ret_val_val_val_FieldName.Set(lift_ret_val_val_val_FieldName_val)
       } else {
         lift_ret_val_val_val_FieldName.Unset()
       }
       lift_ret_val_val_val.FieldName = lift_ret_val_val_val_FieldName
       var lift_ret_val_val_val_FieldSize Option[uint32]
-      if lift_ret_val_val_ptr.field_size.is_some {
+      if lift_ret_val_val_ptr.FieldSize.is_some {
         var lift_ret_val_val_val_FieldSize_val uint32
-        lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.field_size.val)
+        lift_ret_val_val_val_FieldSize_val = uint32(lift_ret_val_val_ptr.FieldSize.val)
         lift_ret_val_val_val_FieldSize.Set(lift_ret_val_val_val_FieldSize_val)
       } else {
         lift_ret_val_val_val_FieldSize.Unset()
@@ -4586,14 +4586,14 @@ func FermyonSpin2_0_0_LlmInfer(model FermyonSpin2_0_0_LlmInferencingModel, promp
     lift_ret_ptr := *(*C.fermyon_spin_2_0_0_llm_inferencing_result_t)(unsafe.Pointer(&ret.val))
     var lift_ret_val FermyonSpin2_0_0_LlmInferencingResult
     var lift_ret_val_Text string
-    lift_ret_val_Text = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_ptr.text.ptr)), C.int(lift_ret_ptr.text.len))
+    lift_ret_val_Text = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_ptr.Text.ptr)), C.int(lift_ret_ptr.Text.len))
     lift_ret_val.Text = lift_ret_val_Text
     var lift_ret_val_Usage FermyonSpin2_0_0_LlmInferencingUsage
     var lift_ret_val_Usage_PromptTokenCount uint32
-    lift_ret_val_Usage_PromptTokenCount = uint32(lift_ret_ptr.usage.prompt_token_count)
+    lift_ret_val_Usage_PromptTokenCount = uint32(lift_ret_ptr.Usage.PromptTokenCount)
     lift_ret_val_Usage.PromptTokenCount = lift_ret_val_Usage_PromptTokenCount
     var lift_ret_val_Usage_GeneratedTokenCount uint32
-    lift_ret_val_Usage_GeneratedTokenCount = uint32(lift_ret_ptr.usage.generated_token_count)
+    lift_ret_val_Usage_GeneratedTokenCount = uint32(lift_ret_ptr.Usage.GeneratedTokenCount)
     lift_ret_val_Usage.GeneratedTokenCount = lift_ret_val_Usage_GeneratedTokenCount
     lift_ret_val.Usage = lift_ret_val_Usage
     lift_ret.Set(lift_ret_val)
@@ -4654,11 +4654,11 @@ func FermyonSpin2_0_0_LlmGenerateEmbeddings(model FermyonSpin2_0_0_LlmEmbeddingM
     lift_ret_ptr := *(*C.fermyon_spin_2_0_0_llm_embeddings_result_t)(unsafe.Pointer(&ret.val))
     var lift_ret_val FermyonSpin2_0_0_LlmEmbeddingsResult
     var lift_ret_val_Embeddings [][]float32
-    lift_ret_val_Embeddings = make([][]float32, lift_ret_ptr.embeddings.len)
-    if lift_ret_ptr.embeddings.len > 0 {
-      for lift_ret_val_Embeddings_i := 0; lift_ret_val_Embeddings_i < int(lift_ret_ptr.embeddings.len); lift_ret_val_Embeddings_i++ {
+    lift_ret_val_Embeddings = make([][]float32, lift_ret_ptr.Embeddings.len)
+    if lift_ret_ptr.Embeddings.len > 0 {
+      for lift_ret_val_Embeddings_i := 0; lift_ret_val_Embeddings_i < int(lift_ret_ptr.Embeddings.len); lift_ret_val_Embeddings_i++ {
         var empty_lift_ret_val_Embeddings C.http_trigger_list_float32_t
-        lift_ret_val_Embeddings_ptr := *(*C.http_trigger_list_float32_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.embeddings.ptr)) +
+        lift_ret_val_Embeddings_ptr := *(*C.http_trigger_list_float32_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.Embeddings.ptr)) +
         uintptr(lift_ret_val_Embeddings_i)*unsafe.Sizeof(empty_lift_ret_val_Embeddings)))
         var list_lift_ret_val_Embeddings []float32
         list_lift_ret_val_Embeddings = make([]float32, lift_ret_val_Embeddings_ptr.len)
@@ -4678,7 +4678,7 @@ func FermyonSpin2_0_0_LlmGenerateEmbeddings(model FermyonSpin2_0_0_LlmEmbeddingM
     lift_ret_val.Embeddings = lift_ret_val_Embeddings
     var lift_ret_val_Usage FermyonSpin2_0_0_LlmEmbeddingsUsage
     var lift_ret_val_Usage_PromptTokenCount uint32
-    lift_ret_val_Usage_PromptTokenCount = uint32(lift_ret_ptr.usage.prompt_token_count)
+    lift_ret_val_Usage_PromptTokenCount = uint32(lift_ret_ptr.Usage.PromptTokenCount)
     lift_ret_val_Usage.PromptTokenCount = lift_ret_val_Usage_PromptTokenCount
     lift_ret_val.Usage = lift_ret_val_Usage
     lift_ret.Set(lift_ret_val)
@@ -6576,57 +6576,57 @@ func (self FermyonSpin2_0_0_PostgresConnection) Query(statement string, params [
     var lift_ret_val FermyonSpin2_0_0_PostgresRowSet
     var lift_ret_val_val FermyonSpin2_0_0_RdbmsTypesRowSet
     var lift_ret_val_val_Columns []FermyonSpin2_0_0_RdbmsTypesColumn
-    lift_ret_val_val_Columns = make([]FermyonSpin2_0_0_RdbmsTypesColumn, lift_ret_ptr.columns.len)
-    if lift_ret_ptr.columns.len > 0 {
-      for lift_ret_val_val_Columns_i := 0; lift_ret_val_val_Columns_i < int(lift_ret_ptr.columns.len); lift_ret_val_val_Columns_i++ {
+    lift_ret_val_val_Columns = make([]FermyonSpin2_0_0_RdbmsTypesColumn, lift_ret_ptr.Columns.len)
+    if lift_ret_ptr.Columns.len > 0 {
+      for lift_ret_val_val_Columns_i := 0; lift_ret_val_val_Columns_i < int(lift_ret_ptr.Columns.len); lift_ret_val_val_Columns_i++ {
         var empty_lift_ret_val_val_Columns C.fermyon_spin_2_0_0_rdbms_types_column_t
-        lift_ret_val_val_Columns_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_column_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.columns.ptr)) +
+        lift_ret_val_val_Columns_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_column_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.Columns.ptr)) +
         uintptr(lift_ret_val_val_Columns_i)*unsafe.Sizeof(empty_lift_ret_val_val_Columns)))
         var list_lift_ret_val_val_Columns FermyonSpin2_0_0_RdbmsTypesColumn
         var list_lift_ret_val_val_Columns_Name string
-        list_lift_ret_val_val_Columns_Name = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_Columns_ptr.name.ptr)), C.int(lift_ret_val_val_Columns_ptr.name.len))
+        list_lift_ret_val_val_Columns_Name = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_Columns_ptr.Name.ptr)), C.int(lift_ret_val_val_Columns_ptr.Name.len))
         list_lift_ret_val_val_Columns.Name = list_lift_ret_val_val_Columns_Name
         var list_lift_ret_val_val_Columns_DataType FermyonSpin2_0_0_RdbmsTypesDbDataType
-        if lift_ret_val_val_Columns_ptr.data_type == 0 {
+        if lift_ret_val_val_Columns_ptr.DataType == 0 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeBoolean()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 1 {
+        if lift_ret_val_val_Columns_ptr.DataType == 1 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt8()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 2 {
+        if lift_ret_val_val_Columns_ptr.DataType == 2 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt16()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 3 {
+        if lift_ret_val_val_Columns_ptr.DataType == 3 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt32()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 4 {
+        if lift_ret_val_val_Columns_ptr.DataType == 4 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt64()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 5 {
+        if lift_ret_val_val_Columns_ptr.DataType == 5 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint8()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 6 {
+        if lift_ret_val_val_Columns_ptr.DataType == 6 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint16()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 7 {
+        if lift_ret_val_val_Columns_ptr.DataType == 7 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint32()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 8 {
+        if lift_ret_val_val_Columns_ptr.DataType == 8 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint64()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 9 {
+        if lift_ret_val_val_Columns_ptr.DataType == 9 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeFloating32()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 10 {
+        if lift_ret_val_val_Columns_ptr.DataType == 10 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeFloating64()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 11 {
+        if lift_ret_val_val_Columns_ptr.DataType == 11 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeStr()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 12 {
+        if lift_ret_val_val_Columns_ptr.DataType == 12 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeBinary()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 13 {
+        if lift_ret_val_val_Columns_ptr.DataType == 13 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeOther()
         }
         list_lift_ret_val_val_Columns.DataType = list_lift_ret_val_val_Columns_DataType
@@ -6635,11 +6635,11 @@ func (self FermyonSpin2_0_0_PostgresConnection) Query(statement string, params [
     }
     lift_ret_val_val.Columns = lift_ret_val_val_Columns
     var lift_ret_val_val_Rows [][]FermyonSpin2_0_0_RdbmsTypesDbValue
-    lift_ret_val_val_Rows = make([][]FermyonSpin2_0_0_RdbmsTypesDbValue, lift_ret_ptr.rows.len)
-    if lift_ret_ptr.rows.len > 0 {
-      for lift_ret_val_val_Rows_i := 0; lift_ret_val_val_Rows_i < int(lift_ret_ptr.rows.len); lift_ret_val_val_Rows_i++ {
+    lift_ret_val_val_Rows = make([][]FermyonSpin2_0_0_RdbmsTypesDbValue, lift_ret_ptr.Rows.len)
+    if lift_ret_ptr.Rows.len > 0 {
+      for lift_ret_val_val_Rows_i := 0; lift_ret_val_val_Rows_i < int(lift_ret_ptr.Rows.len); lift_ret_val_val_Rows_i++ {
         var empty_lift_ret_val_val_Rows C.fermyon_spin_2_0_0_rdbms_types_row_t
-        lift_ret_val_val_Rows_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_row_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.rows.ptr)) +
+        lift_ret_val_val_Rows_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_row_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.Rows.ptr)) +
         uintptr(lift_ret_val_val_Rows_i)*unsafe.Sizeof(empty_lift_ret_val_val_Rows)))
         var list_lift_ret_val_val_Rows []FermyonSpin2_0_0_RdbmsTypesDbValue
         list_lift_ret_val_val_Rows = make([]FermyonSpin2_0_0_RdbmsTypesDbValue, lift_ret_val_val_Rows_ptr.len)
@@ -7190,57 +7190,57 @@ func (self FermyonSpin2_0_0_MysqlConnection) Query(statement string, params []Fe
     var lift_ret_val FermyonSpin2_0_0_MysqlRowSet
     var lift_ret_val_val FermyonSpin2_0_0_RdbmsTypesRowSet
     var lift_ret_val_val_Columns []FermyonSpin2_0_0_RdbmsTypesColumn
-    lift_ret_val_val_Columns = make([]FermyonSpin2_0_0_RdbmsTypesColumn, lift_ret_ptr.columns.len)
-    if lift_ret_ptr.columns.len > 0 {
-      for lift_ret_val_val_Columns_i := 0; lift_ret_val_val_Columns_i < int(lift_ret_ptr.columns.len); lift_ret_val_val_Columns_i++ {
+    lift_ret_val_val_Columns = make([]FermyonSpin2_0_0_RdbmsTypesColumn, lift_ret_ptr.Columns.len)
+    if lift_ret_ptr.Columns.len > 0 {
+      for lift_ret_val_val_Columns_i := 0; lift_ret_val_val_Columns_i < int(lift_ret_ptr.Columns.len); lift_ret_val_val_Columns_i++ {
         var empty_lift_ret_val_val_Columns C.fermyon_spin_2_0_0_rdbms_types_column_t
-        lift_ret_val_val_Columns_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_column_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.columns.ptr)) +
+        lift_ret_val_val_Columns_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_column_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.Columns.ptr)) +
         uintptr(lift_ret_val_val_Columns_i)*unsafe.Sizeof(empty_lift_ret_val_val_Columns)))
         var list_lift_ret_val_val_Columns FermyonSpin2_0_0_RdbmsTypesColumn
         var list_lift_ret_val_val_Columns_Name string
-        list_lift_ret_val_val_Columns_Name = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_Columns_ptr.name.ptr)), C.int(lift_ret_val_val_Columns_ptr.name.len))
+        list_lift_ret_val_val_Columns_Name = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_val_Columns_ptr.Name.ptr)), C.int(lift_ret_val_val_Columns_ptr.Name.len))
         list_lift_ret_val_val_Columns.Name = list_lift_ret_val_val_Columns_Name
         var list_lift_ret_val_val_Columns_DataType FermyonSpin2_0_0_RdbmsTypesDbDataType
-        if lift_ret_val_val_Columns_ptr.data_type == 0 {
+        if lift_ret_val_val_Columns_ptr.DataType == 0 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeBoolean()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 1 {
+        if lift_ret_val_val_Columns_ptr.DataType == 1 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt8()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 2 {
+        if lift_ret_val_val_Columns_ptr.DataType == 2 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt16()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 3 {
+        if lift_ret_val_val_Columns_ptr.DataType == 3 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt32()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 4 {
+        if lift_ret_val_val_Columns_ptr.DataType == 4 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeInt64()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 5 {
+        if lift_ret_val_val_Columns_ptr.DataType == 5 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint8()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 6 {
+        if lift_ret_val_val_Columns_ptr.DataType == 6 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint16()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 7 {
+        if lift_ret_val_val_Columns_ptr.DataType == 7 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint32()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 8 {
+        if lift_ret_val_val_Columns_ptr.DataType == 8 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeUint64()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 9 {
+        if lift_ret_val_val_Columns_ptr.DataType == 9 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeFloating32()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 10 {
+        if lift_ret_val_val_Columns_ptr.DataType == 10 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeFloating64()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 11 {
+        if lift_ret_val_val_Columns_ptr.DataType == 11 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeStr()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 12 {
+        if lift_ret_val_val_Columns_ptr.DataType == 12 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeBinary()
         }
-        if lift_ret_val_val_Columns_ptr.data_type == 13 {
+        if lift_ret_val_val_Columns_ptr.DataType == 13 {
           list_lift_ret_val_val_Columns_DataType = FermyonSpin2_0_0_RdbmsTypesDbDataTypeOther()
         }
         list_lift_ret_val_val_Columns.DataType = list_lift_ret_val_val_Columns_DataType
@@ -7249,11 +7249,11 @@ func (self FermyonSpin2_0_0_MysqlConnection) Query(statement string, params []Fe
     }
     lift_ret_val_val.Columns = lift_ret_val_val_Columns
     var lift_ret_val_val_Rows [][]FermyonSpin2_0_0_RdbmsTypesDbValue
-    lift_ret_val_val_Rows = make([][]FermyonSpin2_0_0_RdbmsTypesDbValue, lift_ret_ptr.rows.len)
-    if lift_ret_ptr.rows.len > 0 {
-      for lift_ret_val_val_Rows_i := 0; lift_ret_val_val_Rows_i < int(lift_ret_ptr.rows.len); lift_ret_val_val_Rows_i++ {
+    lift_ret_val_val_Rows = make([][]FermyonSpin2_0_0_RdbmsTypesDbValue, lift_ret_ptr.Rows.len)
+    if lift_ret_ptr.Rows.len > 0 {
+      for lift_ret_val_val_Rows_i := 0; lift_ret_val_val_Rows_i < int(lift_ret_ptr.Rows.len); lift_ret_val_val_Rows_i++ {
         var empty_lift_ret_val_val_Rows C.fermyon_spin_2_0_0_rdbms_types_row_t
-        lift_ret_val_val_Rows_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_row_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.rows.ptr)) +
+        lift_ret_val_val_Rows_ptr := *(*C.fermyon_spin_2_0_0_rdbms_types_row_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.Rows.ptr)) +
         uintptr(lift_ret_val_val_Rows_i)*unsafe.Sizeof(empty_lift_ret_val_val_Rows)))
         var list_lift_ret_val_val_Rows []FermyonSpin2_0_0_RdbmsTypesDbValue
         list_lift_ret_val_val_Rows = make([]FermyonSpin2_0_0_RdbmsTypesDbValue, lift_ret_val_val_Rows_ptr.len)
@@ -7850,11 +7850,11 @@ func (self FermyonSpin2_0_0_SqliteConnection) Execute(statement string, paramete
     lift_ret_ptr := *(*C.fermyon_spin_2_0_0_sqlite_query_result_t)(unsafe.Pointer(&ret.val))
     var lift_ret_val FermyonSpin2_0_0_SqliteQueryResult
     var lift_ret_val_Columns []string
-    lift_ret_val_Columns = make([]string, lift_ret_ptr.columns.len)
-    if lift_ret_ptr.columns.len > 0 {
-      for lift_ret_val_Columns_i := 0; lift_ret_val_Columns_i < int(lift_ret_ptr.columns.len); lift_ret_val_Columns_i++ {
+    lift_ret_val_Columns = make([]string, lift_ret_ptr.Columns.len)
+    if lift_ret_ptr.Columns.len > 0 {
+      for lift_ret_val_Columns_i := 0; lift_ret_val_Columns_i < int(lift_ret_ptr.Columns.len); lift_ret_val_Columns_i++ {
         var empty_lift_ret_val_Columns C.http_trigger_string_t
-        lift_ret_val_Columns_ptr := *(*C.http_trigger_string_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.columns.ptr)) +
+        lift_ret_val_Columns_ptr := *(*C.http_trigger_string_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.Columns.ptr)) +
         uintptr(lift_ret_val_Columns_i)*unsafe.Sizeof(empty_lift_ret_val_Columns)))
         var list_lift_ret_val_Columns string
         list_lift_ret_val_Columns = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_val_Columns_ptr.ptr)), C.int(lift_ret_val_Columns_ptr.len))
@@ -7863,19 +7863,19 @@ func (self FermyonSpin2_0_0_SqliteConnection) Execute(statement string, paramete
     }
     lift_ret_val.Columns = lift_ret_val_Columns
     var lift_ret_val_Rows []FermyonSpin2_0_0_SqliteRowResult
-    lift_ret_val_Rows = make([]FermyonSpin2_0_0_SqliteRowResult, lift_ret_ptr.rows.len)
-    if lift_ret_ptr.rows.len > 0 {
-      for lift_ret_val_Rows_i := 0; lift_ret_val_Rows_i < int(lift_ret_ptr.rows.len); lift_ret_val_Rows_i++ {
+    lift_ret_val_Rows = make([]FermyonSpin2_0_0_SqliteRowResult, lift_ret_ptr.Rows.len)
+    if lift_ret_ptr.Rows.len > 0 {
+      for lift_ret_val_Rows_i := 0; lift_ret_val_Rows_i < int(lift_ret_ptr.Rows.len); lift_ret_val_Rows_i++ {
         var empty_lift_ret_val_Rows C.fermyon_spin_2_0_0_sqlite_row_result_t
-        lift_ret_val_Rows_ptr := *(*C.fermyon_spin_2_0_0_sqlite_row_result_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.rows.ptr)) +
+        lift_ret_val_Rows_ptr := *(*C.fermyon_spin_2_0_0_sqlite_row_result_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_ptr.Rows.ptr)) +
         uintptr(lift_ret_val_Rows_i)*unsafe.Sizeof(empty_lift_ret_val_Rows)))
         var list_lift_ret_val_Rows FermyonSpin2_0_0_SqliteRowResult
         var list_lift_ret_val_Rows_Values []FermyonSpin2_0_0_SqliteValue
-        list_lift_ret_val_Rows_Values = make([]FermyonSpin2_0_0_SqliteValue, lift_ret_val_Rows_ptr.values.len)
-        if lift_ret_val_Rows_ptr.values.len > 0 {
-          for list_lift_ret_val_Rows_Values_i := 0; list_lift_ret_val_Rows_Values_i < int(lift_ret_val_Rows_ptr.values.len); list_lift_ret_val_Rows_Values_i++ {
+        list_lift_ret_val_Rows_Values = make([]FermyonSpin2_0_0_SqliteValue, lift_ret_val_Rows_ptr.Values.len)
+        if lift_ret_val_Rows_ptr.Values.len > 0 {
+          for list_lift_ret_val_Rows_Values_i := 0; list_lift_ret_val_Rows_Values_i < int(lift_ret_val_Rows_ptr.Values.len); list_lift_ret_val_Rows_Values_i++ {
             var empty_list_lift_ret_val_Rows_Values C.fermyon_spin_2_0_0_sqlite_value_t
-            list_lift_ret_val_Rows_Values_ptr := *(*C.fermyon_spin_2_0_0_sqlite_value_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_val_Rows_ptr.values.ptr)) +
+            list_lift_ret_val_Rows_Values_ptr := *(*C.fermyon_spin_2_0_0_sqlite_value_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_val_Rows_ptr.Values.ptr)) +
             uintptr(list_lift_ret_val_Rows_Values_i)*unsafe.Sizeof(empty_list_lift_ret_val_Rows_Values)))
             var list_list_lift_ret_val_Rows_Values FermyonSpin2_0_0_SqliteValue
             if list_lift_ret_val_Rows_Values_ptr.tag == 0 {
@@ -8559,10 +8559,10 @@ func WasiClocks0_2_0_WallClockNow() WasiClocks0_2_0_WallClockDatetime {
   C.wasi_clocks_0_2_0_wall_clock_now(&ret )
   var lift_ret WasiClocks0_2_0_WallClockDatetime
   var lift_ret_Seconds uint64
-  lift_ret_Seconds = uint64(ret.seconds)
+  lift_ret_Seconds = uint64(ret.Seconds)
   lift_ret.Seconds = lift_ret_Seconds
   var lift_ret_Nanoseconds uint32
-  lift_ret_Nanoseconds = uint32(ret.nanoseconds)
+  lift_ret_Nanoseconds = uint32(ret.Nanoseconds)
   lift_ret.Nanoseconds = lift_ret_Nanoseconds
   return lift_ret
 }
@@ -8572,10 +8572,10 @@ func WasiClocks0_2_0_WallClockResolution() WasiClocks0_2_0_WallClockDatetime {
   C.wasi_clocks_0_2_0_wall_clock_resolution(&ret )
   var lift_ret WasiClocks0_2_0_WallClockDatetime
   var lift_ret_Seconds uint64
-  lift_ret_Seconds = uint64(ret.seconds)
+  lift_ret_Seconds = uint64(ret.Seconds)
   lift_ret.Seconds = lift_ret_Seconds
   var lift_ret_Nanoseconds uint32
-  lift_ret_Nanoseconds = uint32(ret.nanoseconds)
+  lift_ret_Nanoseconds = uint32(ret.Nanoseconds)
   lift_ret.Nanoseconds = lift_ret_Nanoseconds
   return lift_ret
 }
@@ -8641,25 +8641,25 @@ func WasiFilesystem0_2_0_TypesDescriptorTypeSocket() WasiFilesystem0_2_0_TypesDe
 
 type WasiFilesystem0_2_0_TypesDescriptorFlags uint64
 const (
-WasiFilesystem0_2_0_TypesDescriptorFlags_READ WasiFilesystem0_2_0_TypesDescriptorFlags = 1 << iota
-WasiFilesystem0_2_0_TypesDescriptorFlags_WRITE
-WasiFilesystem0_2_0_TypesDescriptorFlags_FILE-INTEGRITY-SYNC
-WasiFilesystem0_2_0_TypesDescriptorFlags_DATA-INTEGRITY-SYNC
-WasiFilesystem0_2_0_TypesDescriptorFlags_REQUESTED-WRITE-SYNC
-WasiFilesystem0_2_0_TypesDescriptorFlags_MUTATE-DIRECTORY
+WasiFilesystem0_2_0_TypesDescriptorFlags_Read WasiFilesystem0_2_0_TypesDescriptorFlags = 1 << iota
+WasiFilesystem0_2_0_TypesDescriptorFlags_Write
+WasiFilesystem0_2_0_TypesDescriptorFlags_FileIntegritySync
+WasiFilesystem0_2_0_TypesDescriptorFlags_DataIntegritySync
+WasiFilesystem0_2_0_TypesDescriptorFlags_RequestedWriteSync
+WasiFilesystem0_2_0_TypesDescriptorFlags_MutateDirectory
 )
 
 type WasiFilesystem0_2_0_TypesPathFlags uint64
 const (
-WasiFilesystem0_2_0_TypesPathFlags_SYMLINK-FOLLOW WasiFilesystem0_2_0_TypesPathFlags = 1 << iota
+WasiFilesystem0_2_0_TypesPathFlags_SymlinkFollow WasiFilesystem0_2_0_TypesPathFlags = 1 << iota
 )
 
 type WasiFilesystem0_2_0_TypesOpenFlags uint64
 const (
-WasiFilesystem0_2_0_TypesOpenFlags_CREATE WasiFilesystem0_2_0_TypesOpenFlags = 1 << iota
-WasiFilesystem0_2_0_TypesOpenFlags_DIRECTORY
-WasiFilesystem0_2_0_TypesOpenFlags_EXCLUSIVE
-WasiFilesystem0_2_0_TypesOpenFlags_TRUNCATE
+WasiFilesystem0_2_0_TypesOpenFlags_Create WasiFilesystem0_2_0_TypesOpenFlags = 1 << iota
+WasiFilesystem0_2_0_TypesOpenFlags_Directory
+WasiFilesystem0_2_0_TypesOpenFlags_Exclusive
+WasiFilesystem0_2_0_TypesOpenFlags_Truncate
 )
 
 type WasiFilesystem0_2_0_TypesLinkCount = uint64
@@ -11056,50 +11056,50 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) Stat() Result[WasiFilesystem0_2_
     lift_ret_ptr := *(*C.wasi_filesystem_0_2_0_types_descriptor_stat_t)(unsafe.Pointer(&ret.val))
     var lift_ret_val WasiFilesystem0_2_0_TypesDescriptorStat
     var lift_ret_val_Type WasiFilesystem0_2_0_TypesDescriptorType
-    if lift_ret_ptr.type == 0 {
+    if lift_ret_ptr.kind == 0 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeUnknown()
     }
-    if lift_ret_ptr.type == 1 {
+    if lift_ret_ptr.kind == 1 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeBlockDevice()
     }
-    if lift_ret_ptr.type == 2 {
+    if lift_ret_ptr.kind == 2 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeCharacterDevice()
     }
-    if lift_ret_ptr.type == 3 {
+    if lift_ret_ptr.kind == 3 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeDirectory()
     }
-    if lift_ret_ptr.type == 4 {
+    if lift_ret_ptr.kind == 4 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeFifo()
     }
-    if lift_ret_ptr.type == 5 {
+    if lift_ret_ptr.kind == 5 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeSymbolicLink()
     }
-    if lift_ret_ptr.type == 6 {
+    if lift_ret_ptr.kind == 6 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeRegularFile()
     }
-    if lift_ret_ptr.type == 7 {
+    if lift_ret_ptr.kind == 7 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeSocket()
     }
     lift_ret_val.Type = lift_ret_val_Type
     var lift_ret_val_LinkCount WasiFilesystem0_2_0_TypesLinkCount
     var lift_ret_val_LinkCount_val uint64
-    lift_ret_val_LinkCount_val = uint64(lift_ret_ptr.link_count)
+    lift_ret_val_LinkCount_val = uint64(lift_ret_ptr.LinkCount)
     lift_ret_val_LinkCount = lift_ret_val_LinkCount_val
     lift_ret_val.LinkCount = lift_ret_val_LinkCount
     var lift_ret_val_Size WasiFilesystem0_2_0_TypesFilesize
     var lift_ret_val_Size_val uint64
-    lift_ret_val_Size_val = uint64(lift_ret_ptr.size)
+    lift_ret_val_Size_val = uint64(lift_ret_ptr.Size)
     lift_ret_val_Size = lift_ret_val_Size_val
     lift_ret_val.Size = lift_ret_val_Size
     var lift_ret_val_DataAccessTimestamp Option[WasiFilesystem0_2_0_TypesDatetime]
-    if lift_ret_ptr.data_access_timestamp.is_some {
+    if lift_ret_ptr.DataAccessTimestamp.is_some {
       var lift_ret_val_DataAccessTimestamp_val WasiFilesystem0_2_0_TypesDatetime
       var lift_ret_val_DataAccessTimestamp_val_val WasiClocks0_2_0_WallClockDatetime
       var lift_ret_val_DataAccessTimestamp_val_val_Seconds uint64
-      lift_ret_val_DataAccessTimestamp_val_val_Seconds = uint64(lift_ret_ptr.data_access_timestamp.val.seconds)
+      lift_ret_val_DataAccessTimestamp_val_val_Seconds = uint64(lift_ret_ptr.DataAccessTimestamp.val.Seconds)
       lift_ret_val_DataAccessTimestamp_val_val.Seconds = lift_ret_val_DataAccessTimestamp_val_val_Seconds
       var lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds uint32
-      lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.data_access_timestamp.val.nanoseconds)
+      lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.DataAccessTimestamp.val.Nanoseconds)
       lift_ret_val_DataAccessTimestamp_val_val.Nanoseconds = lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds
       lift_ret_val_DataAccessTimestamp_val = lift_ret_val_DataAccessTimestamp_val_val
       lift_ret_val_DataAccessTimestamp.Set(lift_ret_val_DataAccessTimestamp_val)
@@ -11108,14 +11108,14 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) Stat() Result[WasiFilesystem0_2_
     }
     lift_ret_val.DataAccessTimestamp = lift_ret_val_DataAccessTimestamp
     var lift_ret_val_DataModificationTimestamp Option[WasiFilesystem0_2_0_TypesDatetime]
-    if lift_ret_ptr.data_modification_timestamp.is_some {
+    if lift_ret_ptr.DataModificationTimestamp.is_some {
       var lift_ret_val_DataModificationTimestamp_val WasiFilesystem0_2_0_TypesDatetime
       var lift_ret_val_DataModificationTimestamp_val_val WasiClocks0_2_0_WallClockDatetime
       var lift_ret_val_DataModificationTimestamp_val_val_Seconds uint64
-      lift_ret_val_DataModificationTimestamp_val_val_Seconds = uint64(lift_ret_ptr.data_modification_timestamp.val.seconds)
+      lift_ret_val_DataModificationTimestamp_val_val_Seconds = uint64(lift_ret_ptr.DataModificationTimestamp.val.Seconds)
       lift_ret_val_DataModificationTimestamp_val_val.Seconds = lift_ret_val_DataModificationTimestamp_val_val_Seconds
       var lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds uint32
-      lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.data_modification_timestamp.val.nanoseconds)
+      lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.DataModificationTimestamp.val.Nanoseconds)
       lift_ret_val_DataModificationTimestamp_val_val.Nanoseconds = lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds
       lift_ret_val_DataModificationTimestamp_val = lift_ret_val_DataModificationTimestamp_val_val
       lift_ret_val_DataModificationTimestamp.Set(lift_ret_val_DataModificationTimestamp_val)
@@ -11124,14 +11124,14 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) Stat() Result[WasiFilesystem0_2_
     }
     lift_ret_val.DataModificationTimestamp = lift_ret_val_DataModificationTimestamp
     var lift_ret_val_StatusChangeTimestamp Option[WasiFilesystem0_2_0_TypesDatetime]
-    if lift_ret_ptr.status_change_timestamp.is_some {
+    if lift_ret_ptr.StatusChangeTimestamp.is_some {
       var lift_ret_val_StatusChangeTimestamp_val WasiFilesystem0_2_0_TypesDatetime
       var lift_ret_val_StatusChangeTimestamp_val_val WasiClocks0_2_0_WallClockDatetime
       var lift_ret_val_StatusChangeTimestamp_val_val_Seconds uint64
-      lift_ret_val_StatusChangeTimestamp_val_val_Seconds = uint64(lift_ret_ptr.status_change_timestamp.val.seconds)
+      lift_ret_val_StatusChangeTimestamp_val_val_Seconds = uint64(lift_ret_ptr.StatusChangeTimestamp.val.Seconds)
       lift_ret_val_StatusChangeTimestamp_val_val.Seconds = lift_ret_val_StatusChangeTimestamp_val_val_Seconds
       var lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds uint32
-      lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.status_change_timestamp.val.nanoseconds)
+      lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.StatusChangeTimestamp.val.Nanoseconds)
       lift_ret_val_StatusChangeTimestamp_val_val.Nanoseconds = lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds
       lift_ret_val_StatusChangeTimestamp_val = lift_ret_val_StatusChangeTimestamp_val_val
       lift_ret_val_StatusChangeTimestamp.Set(lift_ret_val_StatusChangeTimestamp_val)
@@ -11275,50 +11275,50 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) StatAt(path_flags WasiFilesystem
     lift_ret_ptr := *(*C.wasi_filesystem_0_2_0_types_descriptor_stat_t)(unsafe.Pointer(&ret.val))
     var lift_ret_val WasiFilesystem0_2_0_TypesDescriptorStat
     var lift_ret_val_Type WasiFilesystem0_2_0_TypesDescriptorType
-    if lift_ret_ptr.type == 0 {
+    if lift_ret_ptr.kind == 0 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeUnknown()
     }
-    if lift_ret_ptr.type == 1 {
+    if lift_ret_ptr.kind == 1 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeBlockDevice()
     }
-    if lift_ret_ptr.type == 2 {
+    if lift_ret_ptr.kind == 2 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeCharacterDevice()
     }
-    if lift_ret_ptr.type == 3 {
+    if lift_ret_ptr.kind == 3 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeDirectory()
     }
-    if lift_ret_ptr.type == 4 {
+    if lift_ret_ptr.kind == 4 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeFifo()
     }
-    if lift_ret_ptr.type == 5 {
+    if lift_ret_ptr.kind == 5 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeSymbolicLink()
     }
-    if lift_ret_ptr.type == 6 {
+    if lift_ret_ptr.kind == 6 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeRegularFile()
     }
-    if lift_ret_ptr.type == 7 {
+    if lift_ret_ptr.kind == 7 {
       lift_ret_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeSocket()
     }
     lift_ret_val.Type = lift_ret_val_Type
     var lift_ret_val_LinkCount WasiFilesystem0_2_0_TypesLinkCount
     var lift_ret_val_LinkCount_val uint64
-    lift_ret_val_LinkCount_val = uint64(lift_ret_ptr.link_count)
+    lift_ret_val_LinkCount_val = uint64(lift_ret_ptr.LinkCount)
     lift_ret_val_LinkCount = lift_ret_val_LinkCount_val
     lift_ret_val.LinkCount = lift_ret_val_LinkCount
     var lift_ret_val_Size WasiFilesystem0_2_0_TypesFilesize
     var lift_ret_val_Size_val uint64
-    lift_ret_val_Size_val = uint64(lift_ret_ptr.size)
+    lift_ret_val_Size_val = uint64(lift_ret_ptr.Size)
     lift_ret_val_Size = lift_ret_val_Size_val
     lift_ret_val.Size = lift_ret_val_Size
     var lift_ret_val_DataAccessTimestamp Option[WasiFilesystem0_2_0_TypesDatetime]
-    if lift_ret_ptr.data_access_timestamp.is_some {
+    if lift_ret_ptr.DataAccessTimestamp.is_some {
       var lift_ret_val_DataAccessTimestamp_val WasiFilesystem0_2_0_TypesDatetime
       var lift_ret_val_DataAccessTimestamp_val_val WasiClocks0_2_0_WallClockDatetime
       var lift_ret_val_DataAccessTimestamp_val_val_Seconds uint64
-      lift_ret_val_DataAccessTimestamp_val_val_Seconds = uint64(lift_ret_ptr.data_access_timestamp.val.seconds)
+      lift_ret_val_DataAccessTimestamp_val_val_Seconds = uint64(lift_ret_ptr.DataAccessTimestamp.val.Seconds)
       lift_ret_val_DataAccessTimestamp_val_val.Seconds = lift_ret_val_DataAccessTimestamp_val_val_Seconds
       var lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds uint32
-      lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.data_access_timestamp.val.nanoseconds)
+      lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.DataAccessTimestamp.val.Nanoseconds)
       lift_ret_val_DataAccessTimestamp_val_val.Nanoseconds = lift_ret_val_DataAccessTimestamp_val_val_Nanoseconds
       lift_ret_val_DataAccessTimestamp_val = lift_ret_val_DataAccessTimestamp_val_val
       lift_ret_val_DataAccessTimestamp.Set(lift_ret_val_DataAccessTimestamp_val)
@@ -11327,14 +11327,14 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) StatAt(path_flags WasiFilesystem
     }
     lift_ret_val.DataAccessTimestamp = lift_ret_val_DataAccessTimestamp
     var lift_ret_val_DataModificationTimestamp Option[WasiFilesystem0_2_0_TypesDatetime]
-    if lift_ret_ptr.data_modification_timestamp.is_some {
+    if lift_ret_ptr.DataModificationTimestamp.is_some {
       var lift_ret_val_DataModificationTimestamp_val WasiFilesystem0_2_0_TypesDatetime
       var lift_ret_val_DataModificationTimestamp_val_val WasiClocks0_2_0_WallClockDatetime
       var lift_ret_val_DataModificationTimestamp_val_val_Seconds uint64
-      lift_ret_val_DataModificationTimestamp_val_val_Seconds = uint64(lift_ret_ptr.data_modification_timestamp.val.seconds)
+      lift_ret_val_DataModificationTimestamp_val_val_Seconds = uint64(lift_ret_ptr.DataModificationTimestamp.val.Seconds)
       lift_ret_val_DataModificationTimestamp_val_val.Seconds = lift_ret_val_DataModificationTimestamp_val_val_Seconds
       var lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds uint32
-      lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.data_modification_timestamp.val.nanoseconds)
+      lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.DataModificationTimestamp.val.Nanoseconds)
       lift_ret_val_DataModificationTimestamp_val_val.Nanoseconds = lift_ret_val_DataModificationTimestamp_val_val_Nanoseconds
       lift_ret_val_DataModificationTimestamp_val = lift_ret_val_DataModificationTimestamp_val_val
       lift_ret_val_DataModificationTimestamp.Set(lift_ret_val_DataModificationTimestamp_val)
@@ -11343,14 +11343,14 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) StatAt(path_flags WasiFilesystem
     }
     lift_ret_val.DataModificationTimestamp = lift_ret_val_DataModificationTimestamp
     var lift_ret_val_StatusChangeTimestamp Option[WasiFilesystem0_2_0_TypesDatetime]
-    if lift_ret_ptr.status_change_timestamp.is_some {
+    if lift_ret_ptr.StatusChangeTimestamp.is_some {
       var lift_ret_val_StatusChangeTimestamp_val WasiFilesystem0_2_0_TypesDatetime
       var lift_ret_val_StatusChangeTimestamp_val_val WasiClocks0_2_0_WallClockDatetime
       var lift_ret_val_StatusChangeTimestamp_val_val_Seconds uint64
-      lift_ret_val_StatusChangeTimestamp_val_val_Seconds = uint64(lift_ret_ptr.status_change_timestamp.val.seconds)
+      lift_ret_val_StatusChangeTimestamp_val_val_Seconds = uint64(lift_ret_ptr.StatusChangeTimestamp.val.Seconds)
       lift_ret_val_StatusChangeTimestamp_val_val.Seconds = lift_ret_val_StatusChangeTimestamp_val_val_Seconds
       var lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds uint32
-      lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.status_change_timestamp.val.nanoseconds)
+      lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds = uint32(lift_ret_ptr.StatusChangeTimestamp.val.Nanoseconds)
       lift_ret_val_StatusChangeTimestamp_val_val.Nanoseconds = lift_ret_val_StatusChangeTimestamp_val_val_Nanoseconds
       lift_ret_val_StatusChangeTimestamp_val = lift_ret_val_StatusChangeTimestamp_val_val
       lift_ret_val_StatusChangeTimestamp.Set(lift_ret_val_StatusChangeTimestamp_val)
@@ -12619,10 +12619,10 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) MetadataHash() Result[WasiFilesy
     lift_ret_ptr := *(*C.wasi_filesystem_0_2_0_types_metadata_hash_value_t)(unsafe.Pointer(&ret.val))
     var lift_ret_val WasiFilesystem0_2_0_TypesMetadataHashValue
     var lift_ret_val_Lower uint64
-    lift_ret_val_Lower = uint64(lift_ret_ptr.lower)
+    lift_ret_val_Lower = uint64(lift_ret_ptr.Lower)
     lift_ret_val.Lower = lift_ret_val_Lower
     var lift_ret_val_Upper uint64
-    lift_ret_val_Upper = uint64(lift_ret_ptr.upper)
+    lift_ret_val_Upper = uint64(lift_ret_ptr.Upper)
     lift_ret_val.Upper = lift_ret_val_Upper
     lift_ret.Set(lift_ret_val)
   }
@@ -12760,10 +12760,10 @@ func (self WasiFilesystem0_2_0_TypesDescriptor) MetadataHashAt(path_flags WasiFi
     lift_ret_ptr := *(*C.wasi_filesystem_0_2_0_types_metadata_hash_value_t)(unsafe.Pointer(&ret.val))
     var lift_ret_val WasiFilesystem0_2_0_TypesMetadataHashValue
     var lift_ret_val_Lower uint64
-    lift_ret_val_Lower = uint64(lift_ret_ptr.lower)
+    lift_ret_val_Lower = uint64(lift_ret_ptr.Lower)
     lift_ret_val.Lower = lift_ret_val_Lower
     var lift_ret_val_Upper uint64
-    lift_ret_val_Upper = uint64(lift_ret_ptr.upper)
+    lift_ret_val_Upper = uint64(lift_ret_ptr.Upper)
     lift_ret_val.Upper = lift_ret_val_Upper
     lift_ret.Set(lift_ret_val)
   }
@@ -12897,33 +12897,33 @@ func (self WasiFilesystem0_2_0_TypesDirectoryEntryStream) ReadDirectoryEntry() R
     if lift_ret_ptr.is_some {
       var lift_ret_val_val WasiFilesystem0_2_0_TypesDirectoryEntry
       var lift_ret_val_val_Type WasiFilesystem0_2_0_TypesDescriptorType
-      if lift_ret_ptr.val.type == 0 {
+      if lift_ret_ptr.val.kind == 0 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeUnknown()
       }
-      if lift_ret_ptr.val.type == 1 {
+      if lift_ret_ptr.val.kind == 1 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeBlockDevice()
       }
-      if lift_ret_ptr.val.type == 2 {
+      if lift_ret_ptr.val.kind == 2 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeCharacterDevice()
       }
-      if lift_ret_ptr.val.type == 3 {
+      if lift_ret_ptr.val.kind == 3 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeDirectory()
       }
-      if lift_ret_ptr.val.type == 4 {
+      if lift_ret_ptr.val.kind == 4 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeFifo()
       }
-      if lift_ret_ptr.val.type == 5 {
+      if lift_ret_ptr.val.kind == 5 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeSymbolicLink()
       }
-      if lift_ret_ptr.val.type == 6 {
+      if lift_ret_ptr.val.kind == 6 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeRegularFile()
       }
-      if lift_ret_ptr.val.type == 7 {
+      if lift_ret_ptr.val.kind == 7 {
         lift_ret_val_val_Type = WasiFilesystem0_2_0_TypesDescriptorTypeSocket()
       }
       lift_ret_val_val.Type = lift_ret_val_val_Type
       var lift_ret_val_val_Name string
-      lift_ret_val_val_Name = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_ptr.val.name.ptr)), C.int(lift_ret_ptr.val.name.len))
+      lift_ret_val_val_Name = C.GoStringN((*C.char)(unsafe.Pointer(lift_ret_ptr.val.Name.ptr)), C.int(lift_ret_ptr.val.Name.len))
       lift_ret_val_val.Name = lift_ret_val_val_Name
       lift_ret_val.Set(lift_ret_val_val)
     } else {
@@ -13877,20 +13877,20 @@ func (self WasiSockets0_2_0_UdpUdpSocket) LocalAddress() Result[WasiSockets0_2_0
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv4_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv4SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv4Address
       var lift_ret_val_val_val_Address_F0 uint8
-      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint8
-      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint8
-      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint8
-      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv4(lift_ret_val_val_val)
@@ -13899,39 +13899,39 @@ func (self WasiSockets0_2_0_UdpUdpSocket) LocalAddress() Result[WasiSockets0_2_0
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv6_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv6SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_FlowInfo uint32
-      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.flow_info)
+      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.FlowInfo)
       lift_ret_val_val_val.FlowInfo = lift_ret_val_val_val_FlowInfo
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv6Address
       var lift_ret_val_val_val_Address_F0 uint16
-      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint16
-      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint16
-      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint16
-      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       var lift_ret_val_val_val_Address_F4 uint16
-      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.address.f4)
+      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.Address.f4)
       lift_ret_val_val_val_Address.F4 = lift_ret_val_val_val_Address_F4
       var lift_ret_val_val_val_Address_F5 uint16
-      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.address.f5)
+      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.Address.f5)
       lift_ret_val_val_val_Address.F5 = lift_ret_val_val_val_Address_F5
       var lift_ret_val_val_val_Address_F6 uint16
-      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.address.f6)
+      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.Address.f6)
       lift_ret_val_val_val_Address.F6 = lift_ret_val_val_val_Address_F6
       var lift_ret_val_val_val_Address_F7 uint16
-      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.address.f7)
+      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.Address.f7)
       lift_ret_val_val_val_Address.F7 = lift_ret_val_val_val_Address_F7
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       var lift_ret_val_val_val_ScopeId uint32
-      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.scope_id)
+      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.ScopeId)
       lift_ret_val_val_val.ScopeId = lift_ret_val_val_val_ScopeId
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv6(lift_ret_val_val_val)
     }
@@ -14024,20 +14024,20 @@ func (self WasiSockets0_2_0_UdpUdpSocket) RemoteAddress() Result[WasiSockets0_2_
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv4_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv4SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv4Address
       var lift_ret_val_val_val_Address_F0 uint8
-      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint8
-      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint8
-      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint8
-      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv4(lift_ret_val_val_val)
@@ -14046,39 +14046,39 @@ func (self WasiSockets0_2_0_UdpUdpSocket) RemoteAddress() Result[WasiSockets0_2_
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv6_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv6SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_FlowInfo uint32
-      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.flow_info)
+      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.FlowInfo)
       lift_ret_val_val_val.FlowInfo = lift_ret_val_val_val_FlowInfo
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv6Address
       var lift_ret_val_val_val_Address_F0 uint16
-      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint16
-      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint16
-      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint16
-      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       var lift_ret_val_val_val_Address_F4 uint16
-      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.address.f4)
+      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.Address.f4)
       lift_ret_val_val_val_Address.F4 = lift_ret_val_val_val_Address_F4
       var lift_ret_val_val_val_Address_F5 uint16
-      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.address.f5)
+      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.Address.f5)
       lift_ret_val_val_val_Address.F5 = lift_ret_val_val_val_Address_F5
       var lift_ret_val_val_val_Address_F6 uint16
-      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.address.f6)
+      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.Address.f6)
       lift_ret_val_val_val_Address.F6 = lift_ret_val_val_val_Address_F6
       var lift_ret_val_val_val_Address_F7 uint16
-      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.address.f7)
+      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.Address.f7)
       lift_ret_val_val_val_Address.F7 = lift_ret_val_val_val_Address_F7
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       var lift_ret_val_val_val_ScopeId uint32
-      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.scope_id)
+      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.ScopeId)
       lift_ret_val_val_val.ScopeId = lift_ret_val_val_val_ScopeId
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv6(lift_ret_val_val_val)
     }
@@ -14696,11 +14696,11 @@ func (self WasiSockets0_2_0_UdpIncomingDatagramStream) Receive(max_results uint6
         uintptr(lift_ret_val_i)*unsafe.Sizeof(empty_lift_ret_val)))
         var list_lift_ret_val WasiSockets0_2_0_UdpIncomingDatagram
         var list_lift_ret_val_Data []uint8
-        list_lift_ret_val_Data = make([]uint8, lift_ret_val_ptr.data.len)
-        if lift_ret_val_ptr.data.len > 0 {
-          for list_lift_ret_val_Data_i := 0; list_lift_ret_val_Data_i < int(lift_ret_val_ptr.data.len); list_lift_ret_val_Data_i++ {
+        list_lift_ret_val_Data = make([]uint8, lift_ret_val_ptr.Data.len)
+        if lift_ret_val_ptr.Data.len > 0 {
+          for list_lift_ret_val_Data_i := 0; list_lift_ret_val_Data_i < int(lift_ret_val_ptr.Data.len); list_lift_ret_val_Data_i++ {
             var empty_list_lift_ret_val_Data C.uint8_t
-            list_lift_ret_val_Data_ptr := *(*C.uint8_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_val_ptr.data.ptr)) +
+            list_lift_ret_val_Data_ptr := *(*C.uint8_t)(unsafe.Pointer(uintptr(unsafe.Pointer(lift_ret_val_ptr.Data.ptr)) +
             uintptr(list_lift_ret_val_Data_i)*unsafe.Sizeof(empty_list_lift_ret_val_Data)))
             var list_list_lift_ret_val_Data uint8
             list_list_lift_ret_val_Data = uint8(list_lift_ret_val_Data_ptr)
@@ -14710,65 +14710,65 @@ func (self WasiSockets0_2_0_UdpIncomingDatagramStream) Receive(max_results uint6
         list_lift_ret_val.Data = list_lift_ret_val_Data
         var list_lift_ret_val_RemoteAddress WasiSockets0_2_0_UdpIpSocketAddress
         var list_lift_ret_val_RemoteAddress_val WasiSockets0_2_0_NetworkIpSocketAddress
-        if lift_ret_val_ptr.remote_address.tag == 0 {
-          list_lift_ret_val_RemoteAddress_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv4_socket_address_t)(unsafe.Pointer(&lift_ret_val_ptr.remote_address.val))
+        if lift_ret_val_ptr.RemoteAddress.tag == 0 {
+          list_lift_ret_val_RemoteAddress_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv4_socket_address_t)(unsafe.Pointer(&lift_ret_val_ptr.RemoteAddress.val))
           var list_lift_ret_val_RemoteAddress_val_val WasiSockets0_2_0_NetworkIpv4SocketAddress
           var list_lift_ret_val_RemoteAddress_val_val_Port uint16
-          list_lift_ret_val_RemoteAddress_val_val_Port = uint16(list_lift_ret_val_RemoteAddress_val_ptr.port)
+          list_lift_ret_val_RemoteAddress_val_val_Port = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Port)
           list_lift_ret_val_RemoteAddress_val_val.Port = list_lift_ret_val_RemoteAddress_val_val_Port
           var list_lift_ret_val_RemoteAddress_val_val_Address WasiSockets0_2_0_NetworkIpv4Address
           var list_lift_ret_val_RemoteAddress_val_val_Address_F0 uint8
-          list_lift_ret_val_RemoteAddress_val_val_Address_F0 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.address.f0)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F0 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.Address.f0)
           list_lift_ret_val_RemoteAddress_val_val_Address.F0 = list_lift_ret_val_RemoteAddress_val_val_Address_F0
           var list_lift_ret_val_RemoteAddress_val_val_Address_F1 uint8
-          list_lift_ret_val_RemoteAddress_val_val_Address_F1 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.address.f1)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F1 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.Address.f1)
           list_lift_ret_val_RemoteAddress_val_val_Address.F1 = list_lift_ret_val_RemoteAddress_val_val_Address_F1
           var list_lift_ret_val_RemoteAddress_val_val_Address_F2 uint8
-          list_lift_ret_val_RemoteAddress_val_val_Address_F2 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.address.f2)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F2 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.Address.f2)
           list_lift_ret_val_RemoteAddress_val_val_Address.F2 = list_lift_ret_val_RemoteAddress_val_val_Address_F2
           var list_lift_ret_val_RemoteAddress_val_val_Address_F3 uint8
-          list_lift_ret_val_RemoteAddress_val_val_Address_F3 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.address.f3)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F3 = uint8(list_lift_ret_val_RemoteAddress_val_ptr.Address.f3)
           list_lift_ret_val_RemoteAddress_val_val_Address.F3 = list_lift_ret_val_RemoteAddress_val_val_Address_F3
           list_lift_ret_val_RemoteAddress_val_val.Address = list_lift_ret_val_RemoteAddress_val_val_Address
           list_lift_ret_val_RemoteAddress_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv4(list_lift_ret_val_RemoteAddress_val_val)
         }
-        if lift_ret_val_ptr.remote_address.tag == 1 {
-          list_lift_ret_val_RemoteAddress_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv6_socket_address_t)(unsafe.Pointer(&lift_ret_val_ptr.remote_address.val))
+        if lift_ret_val_ptr.RemoteAddress.tag == 1 {
+          list_lift_ret_val_RemoteAddress_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv6_socket_address_t)(unsafe.Pointer(&lift_ret_val_ptr.RemoteAddress.val))
           var list_lift_ret_val_RemoteAddress_val_val WasiSockets0_2_0_NetworkIpv6SocketAddress
           var list_lift_ret_val_RemoteAddress_val_val_Port uint16
-          list_lift_ret_val_RemoteAddress_val_val_Port = uint16(list_lift_ret_val_RemoteAddress_val_ptr.port)
+          list_lift_ret_val_RemoteAddress_val_val_Port = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Port)
           list_lift_ret_val_RemoteAddress_val_val.Port = list_lift_ret_val_RemoteAddress_val_val_Port
           var list_lift_ret_val_RemoteAddress_val_val_FlowInfo uint32
-          list_lift_ret_val_RemoteAddress_val_val_FlowInfo = uint32(list_lift_ret_val_RemoteAddress_val_ptr.flow_info)
+          list_lift_ret_val_RemoteAddress_val_val_FlowInfo = uint32(list_lift_ret_val_RemoteAddress_val_ptr.FlowInfo)
           list_lift_ret_val_RemoteAddress_val_val.FlowInfo = list_lift_ret_val_RemoteAddress_val_val_FlowInfo
           var list_lift_ret_val_RemoteAddress_val_val_Address WasiSockets0_2_0_NetworkIpv6Address
           var list_lift_ret_val_RemoteAddress_val_val_Address_F0 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F0 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f0)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F0 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f0)
           list_lift_ret_val_RemoteAddress_val_val_Address.F0 = list_lift_ret_val_RemoteAddress_val_val_Address_F0
           var list_lift_ret_val_RemoteAddress_val_val_Address_F1 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F1 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f1)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F1 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f1)
           list_lift_ret_val_RemoteAddress_val_val_Address.F1 = list_lift_ret_val_RemoteAddress_val_val_Address_F1
           var list_lift_ret_val_RemoteAddress_val_val_Address_F2 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F2 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f2)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F2 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f2)
           list_lift_ret_val_RemoteAddress_val_val_Address.F2 = list_lift_ret_val_RemoteAddress_val_val_Address_F2
           var list_lift_ret_val_RemoteAddress_val_val_Address_F3 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F3 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f3)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F3 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f3)
           list_lift_ret_val_RemoteAddress_val_val_Address.F3 = list_lift_ret_val_RemoteAddress_val_val_Address_F3
           var list_lift_ret_val_RemoteAddress_val_val_Address_F4 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F4 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f4)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F4 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f4)
           list_lift_ret_val_RemoteAddress_val_val_Address.F4 = list_lift_ret_val_RemoteAddress_val_val_Address_F4
           var list_lift_ret_val_RemoteAddress_val_val_Address_F5 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F5 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f5)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F5 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f5)
           list_lift_ret_val_RemoteAddress_val_val_Address.F5 = list_lift_ret_val_RemoteAddress_val_val_Address_F5
           var list_lift_ret_val_RemoteAddress_val_val_Address_F6 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F6 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f6)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F6 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f6)
           list_lift_ret_val_RemoteAddress_val_val_Address.F6 = list_lift_ret_val_RemoteAddress_val_val_Address_F6
           var list_lift_ret_val_RemoteAddress_val_val_Address_F7 uint16
-          list_lift_ret_val_RemoteAddress_val_val_Address_F7 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.address.f7)
+          list_lift_ret_val_RemoteAddress_val_val_Address_F7 = uint16(list_lift_ret_val_RemoteAddress_val_ptr.Address.f7)
           list_lift_ret_val_RemoteAddress_val_val_Address.F7 = list_lift_ret_val_RemoteAddress_val_val_Address_F7
           list_lift_ret_val_RemoteAddress_val_val.Address = list_lift_ret_val_RemoteAddress_val_val_Address
           var list_lift_ret_val_RemoteAddress_val_val_ScopeId uint32
-          list_lift_ret_val_RemoteAddress_val_val_ScopeId = uint32(list_lift_ret_val_RemoteAddress_val_ptr.scope_id)
+          list_lift_ret_val_RemoteAddress_val_val_ScopeId = uint32(list_lift_ret_val_RemoteAddress_val_ptr.ScopeId)
           list_lift_ret_val_RemoteAddress_val_val.ScopeId = list_lift_ret_val_RemoteAddress_val_val_ScopeId
           list_lift_ret_val_RemoteAddress_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv6(list_lift_ret_val_RemoteAddress_val_val)
         }
@@ -15994,20 +15994,20 @@ func (self WasiSockets0_2_0_TcpTcpSocket) LocalAddress() Result[WasiSockets0_2_0
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv4_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv4SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv4Address
       var lift_ret_val_val_val_Address_F0 uint8
-      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint8
-      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint8
-      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint8
-      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv4(lift_ret_val_val_val)
@@ -16016,39 +16016,39 @@ func (self WasiSockets0_2_0_TcpTcpSocket) LocalAddress() Result[WasiSockets0_2_0
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv6_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv6SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_FlowInfo uint32
-      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.flow_info)
+      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.FlowInfo)
       lift_ret_val_val_val.FlowInfo = lift_ret_val_val_val_FlowInfo
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv6Address
       var lift_ret_val_val_val_Address_F0 uint16
-      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint16
-      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint16
-      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint16
-      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       var lift_ret_val_val_val_Address_F4 uint16
-      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.address.f4)
+      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.Address.f4)
       lift_ret_val_val_val_Address.F4 = lift_ret_val_val_val_Address_F4
       var lift_ret_val_val_val_Address_F5 uint16
-      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.address.f5)
+      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.Address.f5)
       lift_ret_val_val_val_Address.F5 = lift_ret_val_val_val_Address_F5
       var lift_ret_val_val_val_Address_F6 uint16
-      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.address.f6)
+      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.Address.f6)
       lift_ret_val_val_val_Address.F6 = lift_ret_val_val_val_Address_F6
       var lift_ret_val_val_val_Address_F7 uint16
-      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.address.f7)
+      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.Address.f7)
       lift_ret_val_val_val_Address.F7 = lift_ret_val_val_val_Address_F7
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       var lift_ret_val_val_val_ScopeId uint32
-      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.scope_id)
+      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.ScopeId)
       lift_ret_val_val_val.ScopeId = lift_ret_val_val_val_ScopeId
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv6(lift_ret_val_val_val)
     }
@@ -16141,20 +16141,20 @@ func (self WasiSockets0_2_0_TcpTcpSocket) RemoteAddress() Result[WasiSockets0_2_
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv4_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv4SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv4Address
       var lift_ret_val_val_val_Address_F0 uint8
-      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint8(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint8
-      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint8(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint8
-      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint8(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint8
-      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint8(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv4(lift_ret_val_val_val)
@@ -16163,39 +16163,39 @@ func (self WasiSockets0_2_0_TcpTcpSocket) RemoteAddress() Result[WasiSockets0_2_
       lift_ret_val_val_ptr := *(*C.wasi_sockets_0_2_0_network_ipv6_socket_address_t)(unsafe.Pointer(&lift_ret_ptr.val))
       var lift_ret_val_val_val WasiSockets0_2_0_NetworkIpv6SocketAddress
       var lift_ret_val_val_val_Port uint16
-      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.port)
+      lift_ret_val_val_val_Port = uint16(lift_ret_val_val_ptr.Port)
       lift_ret_val_val_val.Port = lift_ret_val_val_val_Port
       var lift_ret_val_val_val_FlowInfo uint32
-      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.flow_info)
+      lift_ret_val_val_val_FlowInfo = uint32(lift_ret_val_val_ptr.FlowInfo)
       lift_ret_val_val_val.FlowInfo = lift_ret_val_val_val_FlowInfo
       var lift_ret_val_val_val_Address WasiSockets0_2_0_NetworkIpv6Address
       var lift_ret_val_val_val_Address_F0 uint16
-      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.address.f0)
+      lift_ret_val_val_val_Address_F0 = uint16(lift_ret_val_val_ptr.Address.f0)
       lift_ret_val_val_val_Address.F0 = lift_ret_val_val_val_Address_F0
       var lift_ret_val_val_val_Address_F1 uint16
-      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.address.f1)
+      lift_ret_val_val_val_Address_F1 = uint16(lift_ret_val_val_ptr.Address.f1)
       lift_ret_val_val_val_Address.F1 = lift_ret_val_val_val_Address_F1
       var lift_ret_val_val_val_Address_F2 uint16
-      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.address.f2)
+      lift_ret_val_val_val_Address_F2 = uint16(lift_ret_val_val_ptr.Address.f2)
       lift_ret_val_val_val_Address.F2 = lift_ret_val_val_val_Address_F2
       var lift_ret_val_val_val_Address_F3 uint16
-      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.address.f3)
+      lift_ret_val_val_val_Address_F3 = uint16(lift_ret_val_val_ptr.Address.f3)
       lift_ret_val_val_val_Address.F3 = lift_ret_val_val_val_Address_F3
       var lift_ret_val_val_val_Address_F4 uint16
-      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.address.f4)
+      lift_ret_val_val_val_Address_F4 = uint16(lift_ret_val_val_ptr.Address.f4)
       lift_ret_val_val_val_Address.F4 = lift_ret_val_val_val_Address_F4
       var lift_ret_val_val_val_Address_F5 uint16
-      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.address.f5)
+      lift_ret_val_val_val_Address_F5 = uint16(lift_ret_val_val_ptr.Address.f5)
       lift_ret_val_val_val_Address.F5 = lift_ret_val_val_val_Address_F5
       var lift_ret_val_val_val_Address_F6 uint16
-      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.address.f6)
+      lift_ret_val_val_val_Address_F6 = uint16(lift_ret_val_val_ptr.Address.f6)
       lift_ret_val_val_val_Address.F6 = lift_ret_val_val_val_Address_F6
       var lift_ret_val_val_val_Address_F7 uint16
-      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.address.f7)
+      lift_ret_val_val_val_Address_F7 = uint16(lift_ret_val_val_ptr.Address.f7)
       lift_ret_val_val_val_Address.F7 = lift_ret_val_val_val_Address_F7
       lift_ret_val_val_val.Address = lift_ret_val_val_val_Address
       var lift_ret_val_val_val_ScopeId uint32
-      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.scope_id)
+      lift_ret_val_val_val_ScopeId = uint32(lift_ret_val_val_ptr.ScopeId)
       lift_ret_val_val_val.ScopeId = lift_ret_val_val_val_ScopeId
       lift_ret_val_val = WasiSockets0_2_0_NetworkIpSocketAddressIpv6(lift_ret_val_val_val)
     }
