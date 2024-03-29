@@ -1,2 +1,4 @@
 github.com/julienschmidt/httprouter v1.3.0 h1:U0609e9tgbseu3rBINet9P48AI/D3oJs4dN7jwJOQ1U=
 github.com/julienschmidt/httprouter v1.3.0/go.mod h1:JR6WtHb+2LUe8TCKY3cZOxFyyO8IZAc4RVcycCCAKdM=
+github.com/ydnar/wasm-tools-go v0.0.0-20240312164546-0b706a5e6902 h1:jIVDOdQX6E1R1hxM9dPIx4COm09EshZ6jGABa2QgqoU=
+github.com/ydnar/wasm-tools-go v0.0.0-20240312164546-0b706a5e6902/go.mod h1:4A40CL6ChtE/gi/ZUgrGs96WTmZ3QVbfbabcMgIbo7g=
