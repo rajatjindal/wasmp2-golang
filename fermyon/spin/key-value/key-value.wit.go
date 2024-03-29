@@ -2,14 +2,14 @@
 
 //go:build !wasip1
 
-// Package keyvalue represents the interface "fermyon:spin/key-value".
+// Package keyvalue represents the interface "fermyon:spin/key-value@2.0.0".
 package keyvalue
 
 import (
 	"github.com/ydnar/wasm-tools-go/cm"
 )
 
-// Error represents the variant "fermyon:spin/key-value#error".
+// Error represents the variant "fermyon:spin/key-value@2.0.0#error".
 //
 // The set of errors which may be raised by functions in this interface
 //
@@ -17,9 +17,7 @@ import (
 //		store-table-full,
 //		no-such-store,
 //		access-denied,
-//		invalid-store,
-//		no-such-key,
-//		io(string),
+//		other(string),
 //	}
 type Error cm.Variant[uint8, string, string]
 
@@ -39,9 +37,7 @@ func (self *Error) StoreTableFull() bool {
 
 // ErrorNoSuchStore returns a [Error] of case "no-such-store".
 //
-// The host does not recognize the store name requested.  Defining and
-// configuring a store with that name in a runtime configuration file
-// may address this.
+// The host does not recognize the store label requested.
 func ErrorNoSuchStore() Error {
 	var data struct{}
 	return cm.New[Error](1, data)
@@ -66,194 +62,144 @@ func (self *Error) AccessDenied() bool {
 	return cm.Tag(self) == 2
 }
 
-// ErrorInvalidStore returns a [Error] of case "invalid-store".
+// ErrorOther returns a [Error] of case "other".
 //
-// The store handle provided is not recognized, i.e. it was either never
-// opened or has been closed.
-func ErrorInvalidStore() Error {
-	var data struct{}
+// Some implementation-specific error has occurred (e.g. I/O)
+func ErrorOther(data string) Error {
 	return cm.New[Error](3, data)
 }
 
-// InvalidStore returns true if [Error] represents the variant case "invalid-store".
-func (self *Error) InvalidStore() bool {
-	return cm.Tag(self) == 3
+// Other returns a non-nil *[string] if [Error] represents the variant case "other".
+func (self *Error) Other() *string {
+	return cm.Case[string](self, 3)
 }
 
-// ErrorNoSuchKey returns a [Error] of case "no-such-key".
+// Store represents the resource "fermyon:spin/key-value@2.0.0#store".
 //
-// No key-value tuple exists for the specified key in the specified
-// store.
-func ErrorNoSuchKey() Error {
-	var data struct{}
-	return cm.New[Error](4, data)
-}
+// An open key-value store
+//
+//	resource store
+type Store cm.Resource
 
-// NoSuchKey returns true if [Error] represents the variant case "no-such-key".
-func (self *Error) NoSuchKey() bool {
-	return cm.Tag(self) == 4
-}
-
-// ErrorIO returns a [Error] of case "io".
+// ResourceDrop represents the Canonical ABI function "resource-drop".
 //
-// Some implementation-specific error has occurred (e.g. I/O)
-func ErrorIO(data string) Error {
-	return cm.New[Error](5, data)
-}
-
-// IO returns a non-nil *[string] if [Error] represents the variant case "io".
-func (self *Error) IO() *string {
-	return cm.Case[string](self, 5)
-}
-
-// Store represents the type "fermyon:spin/key-value#store".
-//
-// A handle to an open key-value store
-//
-//	type store = u32
-type Store uint32
-
-// Close represents function "fermyon:spin/key-value#close".
-//
-// Close the specified `store`.
-//
-// This has no effect if `store` is not a valid handle to an open store.
-//
-//	close: func(store: store)
+// Drops a resource handle.
 //
 //go:nosplit
-func Close(store Store) {
-	wasmimport_Close(store)
+func (self Store) ResourceDrop() {
+	self.wasmimport_ResourceDrop()
 }
 
-//go:wasmimport fermyon:spin/key-value close
+//go:wasmimport fermyon:spin/key-value@2.0.0 [resource-drop]store
 //go:noescape
-func wasmimport_Close(store Store)
+func (self Store) wasmimport_ResourceDrop()
 
-// Delete represents function "fermyon:spin/key-value#delete".
+// StoreOpen represents static function "open".
 //
-// Delete the tuple with the specified `key` from the specified `store`.
+// Open the store with the specified label.
 //
-// `error::invalid-store` will be raised if `store` is not a valid handle
-// to an open store.  No error is raised if a tuple did not previously
-// exist for `key`.
+// `label` must refer to a store allowed in the spin.toml manifest.
 //
-//	delete: func(store: store, key: string) -> result<_, error>
+// `error::no-such-store` will be raised if the `label` is not recognized.
+//
+//	open: static func(label: string) -> result<own<store>, error>
 //
 //go:nosplit
-func Delete(store Store, key string) cm.ErrResult[struct{}, Error] {
-	var result cm.ErrResult[struct{}, Error]
-	wasmimport_Delete(store, key, &result)
-	return result
-}
-
-//go:wasmimport fermyon:spin/key-value delete
-//go:noescape
-func wasmimport_Delete(store Store, key string, result *cm.ErrResult[struct{}, Error])
-
-// Exists represents function "fermyon:spin/key-value#exists".
-//
-// Return whether a tuple exists for the specified `key` in the specified
-// `store`.
-//
-// `error::invalid-store` will be raised if `store` is not a valid handle
-// to an open store.
-//
-//	exists: func(store: store, key: string) -> result<bool, error>
-//
-//go:nosplit
-func Exists(store Store, key string) cm.ErrResult[bool, Error] {
-	var result cm.ErrResult[bool, Error]
-	wasmimport_Exists(store, key, &result)
-	return result
-}
-
-//go:wasmimport fermyon:spin/key-value exists
-//go:noescape
-func wasmimport_Exists(store Store, key string, result *cm.ErrResult[bool, Error])
-
-// Get represents function "fermyon:spin/key-value#get".
-//
-// Get the value associated with the specified `key` from the specified
-// `store`.
-//
-// `error::invalid-store` will be raised if `store` is not a valid handle
-// to an open store, and `error::no-such-key` will be raised if there is no
-// tuple for `key` in `store`.
-//
-//	get: func(store: store, key: string) -> result<list<u8>, error>
-//
-//go:nosplit
-func Get(store Store, key string) cm.ErrResult[cm.List[uint8], Error] {
-	var result cm.ErrResult[cm.List[uint8], Error]
-	wasmimport_Get(store, key, &result)
-	return result
-}
-
-//go:wasmimport fermyon:spin/key-value get
-//go:noescape
-func wasmimport_Get(store Store, key string, result *cm.ErrResult[cm.List[uint8], Error])
-
-// GetKeys represents function "fermyon:spin/key-value#get-keys".
-//
-// Return a list of all the keys in the specified `store`.
-//
-// `error::invalid-store` will be raised if `store` is not a valid handle
-// to an open store.
-//
-//	get-keys: func(store: store) -> result<list<string>, error>
-//
-//go:nosplit
-func GetKeys(store Store) cm.ErrResult[cm.List[string], Error] {
-	var result cm.ErrResult[cm.List[string], Error]
-	wasmimport_GetKeys(store, &result)
-	return result
-}
-
-//go:wasmimport fermyon:spin/key-value get-keys
-//go:noescape
-func wasmimport_GetKeys(store Store, result *cm.ErrResult[cm.List[string], Error])
-
-// Open represents function "fermyon:spin/key-value#open".
-//
-// Open the store with the specified name.
-//
-// If `name` is "default", the default store is opened.  Otherwise,
-// `name` must refer to a store defined and configured in a runtime
-// configuration file supplied with the application.
-//
-// `error::no-such-store` will be raised if the `name` is not recognized.
-//
-//	open: func(name: string) -> result<store, error>
-//
-//go:nosplit
-func Open(name string) cm.ErrResult[Store, Error] {
+func StoreOpen(label string) cm.ErrResult[Store, Error] {
 	var result cm.ErrResult[Store, Error]
-	wasmimport_Open(name, &result)
+	wasmimport_StoreOpen(label, &result)
 	return result
 }
 
-//go:wasmimport fermyon:spin/key-value open
+//go:wasmimport fermyon:spin/key-value@2.0.0 [static]store.open
 //go:noescape
-func wasmimport_Open(name string, result *cm.ErrResult[Store, Error])
+func wasmimport_StoreOpen(label string, result *cm.ErrResult[Store, Error])
 
-// Set represents function "fermyon:spin/key-value#set".
+// Delete represents method "delete".
 //
-// Set the `value` associated with the specified `key` in the specified
-// `store`, overwriting any existing value.
+// Delete the tuple with the specified `key`
 //
-// `error::invalid-store` will be raised if `store` is not a valid handle
-// to an open store.
+// No error is raised if a tuple did not previously exist for `key`.
 //
-//	set: func(store: store, key: string, value: list<u8>) -> result<_, error>
+//	delete: func(key: string) -> result<_, error>
 //
 //go:nosplit
-func Set(store Store, key string, value cm.List[uint8]) cm.ErrResult[struct{}, Error] {
+func (self Store) Delete(key string) cm.ErrResult[struct{}, Error] {
 	var result cm.ErrResult[struct{}, Error]
-	wasmimport_Set(store, key, value, &result)
+	self.wasmimport_Delete(key, &result)
 	return result
 }
 
-//go:wasmimport fermyon:spin/key-value set
+//go:wasmimport fermyon:spin/key-value@2.0.0 [method]store.delete
 //go:noescape
-func wasmimport_Set(store Store, key string, value cm.List[uint8], result *cm.ErrResult[struct{}, Error])
+func (self Store) wasmimport_Delete(key string, result *cm.ErrResult[struct{}, Error])
+
+// Exists represents method "exists".
+//
+// Return whether a tuple exists for the specified `key`
+//
+//	exists: func(key: string) -> result<bool, error>
+//
+//go:nosplit
+func (self Store) Exists(key string) cm.ErrResult[bool, Error] {
+	var result cm.ErrResult[bool, Error]
+	self.wasmimport_Exists(key, &result)
+	return result
+}
+
+//go:wasmimport fermyon:spin/key-value@2.0.0 [method]store.exists
+//go:noescape
+func (self Store) wasmimport_Exists(key string, result *cm.ErrResult[bool, Error])
+
+// Get represents method "get".
+//
+// Get the value associated with the specified `key`
+//
+// Returns `ok(none)` if the key does not exist.
+//
+//	get: func(key: string) -> result<option<list<u8>>, error>
+//
+//go:nosplit
+func (self Store) Get(key string) cm.OKResult[cm.Option[cm.List[uint8]], Error] {
+	var result cm.OKResult[cm.Option[cm.List[uint8]], Error]
+	self.wasmimport_Get(key, &result)
+	return result
+}
+
+//go:wasmimport fermyon:spin/key-value@2.0.0 [method]store.get
+//go:noescape
+func (self Store) wasmimport_Get(key string, result *cm.OKResult[cm.Option[cm.List[uint8]], Error])
+
+// GetKeys represents method "get-keys".
+//
+// Return a list of all the keys
+//
+//	get-keys: func() -> result<list<string>, error>
+//
+//go:nosplit
+func (self Store) GetKeys() cm.ErrResult[cm.List[string], Error] {
+	var result cm.ErrResult[cm.List[string], Error]
+	self.wasmimport_GetKeys(&result)
+	return result
+}
+
+//go:wasmimport fermyon:spin/key-value@2.0.0 [method]store.get-keys
+//go:noescape
+func (self Store) wasmimport_GetKeys(result *cm.ErrResult[cm.List[string], Error])
+
+// Set represents method "set".
+//
+// Set the `value` associated with the specified `key` overwriting any existing value.
+//
+//	set: func(key: string, value: list<u8>) -> result<_, error>
+//
+//go:nosplit
+func (self Store) Set(key string, value cm.List[uint8]) cm.ErrResult[struct{}, Error] {
+	var result cm.ErrResult[struct{}, Error]
+	self.wasmimport_Set(key, value, &result)
+	return result
+}
+
+//go:wasmimport fermyon:spin/key-value@2.0.0 [method]store.set
+//go:noescape
+func (self Store) wasmimport_Set(key string, value cm.List[uint8], result *cm.ErrResult[struct{}, Error])
