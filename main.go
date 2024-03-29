@@ -1,7 +1,7 @@
 package main
 
 import (
-	foobar "github.com/rajatjindal/wasip2-golang/foo/foo/foo-bar"
+	variables "github.com/rajatjindal/wasip2-golang/fermyon/spin/variables/v2.0.0"
 )
 
 func init() {
@@ -9,5 +9,5 @@ func init() {
 }
 
 func main() {
-	foobar.Hello()
+	variables.Get("hello")
 }
