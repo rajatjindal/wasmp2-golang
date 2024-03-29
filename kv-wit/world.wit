@@ -13,4 +13,7 @@ world platform {
     import wasi:filesystem/preopens@0.2.0;
 
     import key-value;
+    import inbound-http;
+
+    export foo;
 }
