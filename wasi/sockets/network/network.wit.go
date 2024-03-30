@@ -274,3 +274,8 @@ func (self Network) ResourceDrop() {
 //go:wasmimport wasi:sockets/network@0.2.0 [resource-drop]network
 //go:noescape
 func (self Network) wasmimport_ResourceDrop()
+
+type Interface interface {
+}
+
+var instance Interface

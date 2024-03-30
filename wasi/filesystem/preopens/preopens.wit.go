@@ -31,3 +31,9 @@ func GetDirectories() cm.List[cm.Tuple[Descriptor, string]] {
 //go:wasmimport wasi:filesystem/preopens@0.2.0 get-directories
 //go:noescape
 func wasmimport_GetDirectories(result *cm.List[cm.Tuple[Descriptor, string]])
+
+type Interface interface {
+	GetDirectories() cm.List[cm.Tuple[Descriptor, string]]
+}
+
+var instance Interface

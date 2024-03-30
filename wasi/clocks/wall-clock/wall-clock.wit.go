@@ -80,3 +80,10 @@ func Resolution() DateTime {
 //go:wasmimport wasi:clocks/wall-clock@0.2.0 resolution
 //go:noescape
 func wasmimport_Resolution(result *DateTime)
+
+type Interface interface {
+	Now() DateTime
+	Resolution() DateTime
+}
+
+var instance Interface

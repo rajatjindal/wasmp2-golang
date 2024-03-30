@@ -107,3 +107,12 @@ func SubscribeInstant(when Instant) Pollable {
 //go:wasmimport wasi:clocks/monotonic-clock@0.2.0 subscribe-instant
 //go:noescape
 func wasmimport_SubscribeInstant(when Instant) Pollable
+
+type Interface interface {
+	Now() Instant
+	Resolution() Duration
+	SubscribeDuration(when Duration) Pollable
+	SubscribeInstant(when Instant) Pollable
+}
+
+var instance Interface

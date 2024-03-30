@@ -26,3 +26,9 @@ func GetStdout() OutputStream {
 //go:wasmimport wasi:cli/stdout@0.2.0 get-stdout
 //go:noescape
 func wasmimport_GetStdout() OutputStream
+
+type Interface interface {
+	GetStdout() OutputStream
+}
+
+var instance Interface

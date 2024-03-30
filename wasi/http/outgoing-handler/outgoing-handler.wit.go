@@ -59,3 +59,9 @@ func Handle(request OutgoingRequest, options cm.Option[RequestOptions]) cm.ErrRe
 //go:wasmimport wasi:http/outgoing-handler@0.2.0 handle
 //go:noescape
 func wasmimport_Handle(request OutgoingRequest, options cm.Option[RequestOptions], result *cm.ErrResult[FutureIncomingResponse, ErrorCode])
+
+type Interface interface {
+	Handle(request OutgoingRequest, options cm.Option[RequestOptions]) cm.ErrResult[FutureIncomingResponse, ErrorCode]
+}
+
+var instance Interface

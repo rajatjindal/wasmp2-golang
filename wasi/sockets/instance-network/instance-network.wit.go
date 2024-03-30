@@ -30,3 +30,9 @@ func InstanceNetwork() Network {
 //go:wasmimport wasi:sockets/instance-network@0.2.0 instance-network
 //go:noescape
 func wasmimport_InstanceNetwork() Network
+
+type Interface interface {
+	InstanceNetwork() Network
+}
+
+var instance Interface

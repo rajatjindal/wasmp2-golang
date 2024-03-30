@@ -67,3 +67,11 @@ func InitialCWD() cm.Option[string] {
 //go:wasmimport wasi:cli/environment@0.2.0 initial-cwd
 //go:noescape
 func wasmimport_InitialCWD(result *cm.Option[string])
+
+type Interface interface {
+	GetArguments() cm.List[string]
+	GetEnvironment() cm.List[[2]string]
+	InitialCWD() cm.Option[string]
+}
+
+var instance Interface

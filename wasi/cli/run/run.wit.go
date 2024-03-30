@@ -23,3 +23,9 @@ func Run() cm.Result {
 //go:wasmimport wasi:cli/run@0.2.0 run
 //go:noescape
 func wasmimport_Run() cm.Result
+
+type Interface interface {
+	Run() cm.Result
+}
+
+var instance Interface

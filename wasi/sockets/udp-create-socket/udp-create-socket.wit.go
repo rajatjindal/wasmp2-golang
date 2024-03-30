@@ -72,3 +72,9 @@ func CreateUDPSocket(addressFamily IPAddressFamily) cm.OKResult[UDPSocket, Error
 //go:wasmimport wasi:sockets/udp-create-socket@0.2.0 create-udp-socket
 //go:noescape
 func wasmimport_CreateUDPSocket(addressFamily IPAddressFamily, result *cm.OKResult[UDPSocket, ErrorCode])
+
+type Interface interface {
+	CreateUDPSocket(addressFamily IPAddressFamily) cm.OKResult[UDPSocket, ErrorCode]
+}
+
+var instance Interface

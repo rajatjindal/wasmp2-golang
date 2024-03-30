@@ -1,30 +1,32 @@
 package main
 
 import (
-	"fmt"
-
-	httptypes "github.com/rajatjindal/wasip2-golang/fermyon/spin/http-types"
-	inboundhttp "github.com/rajatjindal/wasip2-golang/fermyon/spin/inbound-http"
-	keyvalue "github.com/rajatjindal/wasip2-golang/fermyon/spin/key-value"
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/rajatjindal/wasip2-golang/fermyon/spin/foo"
 )
 
 func init() {
-	_ = inboundhttp.HandleRequest(httptypes.Request{})
-	opt := keyvalue.StoreOpen("default")
-	if opt.IsErr() {
-		panic(opt.Err())
-	}
+	// inboundhttp.HandleFn(func(req inboundhttp.Request) *inboundhttp.Response {
+	// 	return &inboundhttp.Response{
+	// 		Status: 201,
+	// 	}
+	// })
 
-	store := opt.OK()
-	d := []byte("aa")
-	store.Set("hello", cm.ToList(d))
-	res := store.Get("hello")
-	if res.IsErr() {
-		panic(res.Err())
-	}
+	foo.Greet()
+	// _ = inboundhttp.HandleRequest(httptypes.Request{})
+	// opt := keyvalue.StoreOpen("default")
+	// if opt.IsErr() {
+	// 	panic(opt.Err())
+	// }
 
-	fmt.Println(string(res.OK().Some().Slice()))
+	// store := opt.OK()
+	// d := []byte("aa")
+	// store.Set("hello", cm.ToList(d))
+	// res := store.Get("hello")
+	// if res.IsErr() {
+	// 	panic(res.Err())
+	// }
+
+	// fmt.Println(string(res.OK().Some().Slice()))
 }
 
 func main() {

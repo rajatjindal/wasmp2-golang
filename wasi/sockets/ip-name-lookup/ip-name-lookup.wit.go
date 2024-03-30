@@ -135,3 +135,9 @@ func ResolveAddresses(network_ Network, name string) cm.OKResult[ResolveAddressS
 //go:wasmimport wasi:sockets/ip-name-lookup@0.2.0 resolve-addresses
 //go:noescape
 func wasmimport_ResolveAddresses(network_ Network, name string, result *cm.OKResult[ResolveAddressStream, ErrorCode])
+
+type Interface interface {
+	ResolveAddresses(network_ Network, name string) cm.OKResult[ResolveAddressStream, ErrorCode]
+}
+
+var instance Interface

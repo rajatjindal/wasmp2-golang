@@ -35,3 +35,9 @@ func GetTerminalStderr() cm.Option[TerminalOutput] {
 //go:wasmimport wasi:cli/terminal-stderr@0.2.0 get-terminal-stderr
 //go:noescape
 func wasmimport_GetTerminalStderr(result *cm.Option[TerminalOutput])
+
+type Interface interface {
+	GetTerminalStderr() cm.Option[TerminalOutput]
+}
+
+var instance Interface

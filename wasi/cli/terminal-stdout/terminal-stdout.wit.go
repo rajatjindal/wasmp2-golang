@@ -35,3 +35,9 @@ func GetTerminalStdout() cm.Option[TerminalOutput] {
 //go:wasmimport wasi:cli/terminal-stdout@0.2.0 get-terminal-stdout
 //go:noescape
 func wasmimport_GetTerminalStdout(result *cm.Option[TerminalOutput])
+
+type Interface interface {
+	GetTerminalStdout() cm.Option[TerminalOutput]
+}
+
+var instance Interface

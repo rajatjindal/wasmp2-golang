@@ -1257,3 +1257,9 @@ func FilesystemErrorCode(err Error) cm.Option[ErrorCode] {
 //go:wasmimport wasi:filesystem/types@0.2.0 filesystem-error-code
 //go:noescape
 func wasmimport_FilesystemErrorCode(err Error, result *cm.Option[ErrorCode])
+
+type Interface interface {
+	FilesystemErrorCode(err Error) cm.Option[ErrorCode]
+}
+
+var instance Interface

@@ -101,3 +101,9 @@ func Poll(in cm.List[Pollable]) cm.List[uint32] {
 //go:wasmimport wasi:io/poll@0.2.0 poll
 //go:noescape
 func wasmimport_Poll(in cm.List[Pollable], result *cm.List[uint32])
+
+type Interface interface {
+	Poll(in cm.List[Pollable]) cm.List[uint32]
+}
+
+var instance Interface

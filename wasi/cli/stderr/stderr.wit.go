@@ -26,3 +26,9 @@ func GetStderr() OutputStream {
 //go:wasmimport wasi:cli/stderr@0.2.0 get-stderr
 //go:noescape
 func wasmimport_GetStderr() OutputStream
+
+type Interface interface {
+	GetStderr() OutputStream
+}
+
+var instance Interface

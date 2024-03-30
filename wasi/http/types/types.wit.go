@@ -2057,3 +2057,17 @@ func HTTPErrorCode(err IOError) cm.Option[ErrorCode] {
 //go:wasmimport wasi:http/types@0.2.0 http-error-code
 //go:noescape
 func wasmimport_HTTPErrorCode(err IOError, result *cm.Option[ErrorCode])
+
+type Interface interface {
+	NewFields() Fields
+	NewOutgoingRequest(headers Headers) OutgoingRequest
+	NewOutgoingResponse(headers Headers) OutgoingResponse
+	NewRequestOptions() RequestOptions
+	FieldsFromList(entries cm.List[cm.Tuple[FieldKey, FieldValue]]) cm.OKResult[Fields, HeaderError]
+	IncomingBodyFinish(this IncomingBody) FutureTrailers
+	OutgoingBodyFinish(this OutgoingBody, trailers cm.Option[Trailers]) cm.ErrResult[struct{}, ErrorCode]
+	ResponseOutparamSet(param ResponseOutparam, response cm.ErrResult[OutgoingResponse, ErrorCode])
+	HTTPErrorCode(err IOError) cm.Option[ErrorCode]
+}
+
+var instance Interface

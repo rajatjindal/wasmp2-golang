@@ -203,3 +203,9 @@ func (self Store) Set(key string, value cm.List[uint8]) cm.ErrResult[struct{}, E
 //go:wasmimport fermyon:spin/key-value@2.0.0 [method]store.set
 //go:noescape
 func (self Store) wasmimport_Set(key string, value cm.List[uint8], result *cm.ErrResult[struct{}, Error])
+
+type Interface interface {
+	StoreOpen(label string) cm.ErrResult[Store, Error]
+}
+
+var instance Interface

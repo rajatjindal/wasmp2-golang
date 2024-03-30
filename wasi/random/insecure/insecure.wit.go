@@ -55,3 +55,10 @@ func GetInsecureRandomU64() uint64 {
 //go:wasmimport wasi:random/insecure@0.2.0 get-insecure-random-u64
 //go:noescape
 func wasmimport_GetInsecureRandomU64() uint64
+
+type Interface interface {
+	GetInsecureRandomBytes(len_ uint64) cm.List[uint8]
+	GetInsecureRandomU64() uint64
+}
+
+var instance Interface

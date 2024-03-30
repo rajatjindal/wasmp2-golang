@@ -23,3 +23,9 @@ func Exit(status cm.Result) {
 //go:wasmimport wasi:cli/exit@0.2.0 exit
 //go:noescape
 func wasmimport_Exit(status cm.Result)
+
+type Interface interface {
+	Exit(status cm.Result)
+}
+
+var instance Interface

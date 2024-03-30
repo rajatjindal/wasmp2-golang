@@ -45,3 +45,9 @@ func Handle(request IncomingRequest, responseOut ResponseOutparam) {
 //go:wasmimport wasi:http/incoming-handler@0.2.0 handle
 //go:noescape
 func wasmimport_Handle(request IncomingRequest, responseOut ResponseOutparam)
+
+type Interface interface {
+	Handle(request IncomingRequest, responseOut ResponseOutparam)
+}
+
+var instance Interface

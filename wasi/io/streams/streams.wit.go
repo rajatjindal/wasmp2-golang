@@ -507,3 +507,8 @@ func StreamErrorClosed() StreamError {
 func (self *StreamError) Closed() bool {
 	return cm.Tag(self) == 1
 }
+
+type Interface interface {
+}
+
+var instance Interface

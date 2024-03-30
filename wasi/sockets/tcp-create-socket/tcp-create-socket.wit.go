@@ -72,3 +72,9 @@ func CreateTCPSocket(addressFamily IPAddressFamily) cm.OKResult[TCPSocket, Error
 //go:wasmimport wasi:sockets/tcp-create-socket@0.2.0 create-tcp-socket
 //go:noescape
 func wasmimport_CreateTCPSocket(addressFamily IPAddressFamily, result *cm.OKResult[TCPSocket, ErrorCode])
+
+type Interface interface {
+	CreateTCPSocket(addressFamily IPAddressFamily) cm.OKResult[TCPSocket, ErrorCode]
+}
+
+var instance Interface

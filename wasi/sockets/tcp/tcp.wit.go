@@ -855,3 +855,8 @@ func (self TCPSocket) Subscribe() Pollable {
 //go:wasmimport wasi:sockets/tcp@0.2.0 [method]tcp-socket.subscribe
 //go:noescape
 func (self TCPSocket) wasmimport_Subscribe() Pollable
+
+type Interface interface {
+}
+
+var instance Interface

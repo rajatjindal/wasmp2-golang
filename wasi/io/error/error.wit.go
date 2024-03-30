@@ -69,3 +69,8 @@ func (self Error) ToDebugString() string {
 //go:wasmimport wasi:io/error@0.2.0 [method]error.to-debug-string
 //go:noescape
 func (self Error) wasmimport_ToDebugString(result *string)
+
+type Interface interface {
+}
+
+var instance Interface

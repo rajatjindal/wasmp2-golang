@@ -34,3 +34,8 @@ func (self TerminalOutput) ResourceDrop() {
 //go:wasmimport wasi:cli/terminal-output@0.2.0 [resource-drop]terminal-output
 //go:noescape
 func (self TerminalOutput) wasmimport_ResourceDrop()
+
+type Interface interface {
+}
+
+var instance Interface

@@ -107,3 +107,8 @@ type Response struct {
 //
 //	type uri = string
 type URI string
+
+type Interface interface {
+}
+
+var instance Interface

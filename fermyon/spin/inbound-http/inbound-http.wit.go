@@ -33,3 +33,9 @@ func HandleRequest(req Request) Response {
 //go:wasmimport fermyon:spin/inbound-http@2.0.0 handle-request
 //go:noescape
 func wasmimport_HandleRequest(req Request, result *Response)
+
+type Interface interface {
+	HandleRequest(req Request) Response
+}
+
+var instance Interface

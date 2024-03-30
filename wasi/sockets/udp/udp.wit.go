@@ -640,3 +640,8 @@ func (self UDPSocket) UnicastHopLimit() cm.OKResult[uint8, ErrorCode] {
 //go:wasmimport wasi:sockets/udp@0.2.0 [method]udp-socket.unicast-hop-limit
 //go:noescape
 func (self UDPSocket) wasmimport_UnicastHopLimit(result *cm.OKResult[uint8, ErrorCode])
+
+type Interface interface {
+}
+
+var instance Interface
