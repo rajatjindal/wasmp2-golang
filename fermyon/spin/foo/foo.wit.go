@@ -5,24 +5,23 @@
 // Package foo represents the interface "fermyon:spin/foo@2.0.0".
 package foo
 
-import "fmt"
 // Greet represents function "fermyon:spin/foo@2.0.0#greet".
 //
-//	greet: func()
+//	greet: func() -> string
 //
 //go:nosplit
-//export fermyon:spin/foo@2.0.0#greet
-func Greet() {
-	fmt.Println("hello greetings")
-	wasmimport_Greet()
+func Greet() string {
+	var result string
+	wasmimport_Greet(&result)
+	return result
 }
 
 //go:wasmimport fermyon:spin/foo@2.0.0 greet
 //go:noescape
-func wasmimport_Greet()
+func wasmimport_Greet(result *string)
 
 type Interface interface {
-	Greet()
+	Greet(*string)
 }
 
 var instance Interface

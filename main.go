@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/rajatjindal/wasip2-golang/fermyon/spin/foo"
 )
 
@@ -11,7 +13,7 @@ func init() {
 	// 	}
 	// })
 
-	foo.Greet()
+	// foo.Greet()
 	// _ = inboundhttp.HandleRequest(httptypes.Request{})
 	// opt := keyvalue.StoreOpen("default")
 	// if opt.IsErr() {
@@ -30,5 +32,8 @@ func init() {
 }
 
 func main() {
-
+	var s string
+	foo.Greet2(&foo.Impl{}, &s)
+	fmt.Println(s)
+	// inboundhttp.Export(&inboundhttp.Impl{})
 }
