@@ -1,6 +1,6 @@
-package fermyon:spin@2.0.0;
+package foo-namespace:pkg@2.0.0;
 
-world platform {
+world foo-world {
     import wasi:io/streams@0.2.0;
     import wasi:cli/stdout@0.2.0;
     import wasi:cli/environment@0.2.0;
@@ -12,10 +12,7 @@ world platform {
     import wasi:filesystem/types@0.2.0;
     import wasi:filesystem/preopens@0.2.0;
 
-    // import key-value;
-    // import inbound-http;
     import foo;
 
     export foo;
-    // export inbound-http;
 }

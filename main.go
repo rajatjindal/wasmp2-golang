@@ -32,8 +32,6 @@ func init() {
 }
 
 func main() {
-	var s string
-	foo.Greet2(&foo.Impl{}, &s)
-	fmt.Println(s)
-	// inboundhttp.Export(&inboundhttp.Impl{})
+	f := &foo.Impl{}
+	fmt.Println(f.Greet())
 }
